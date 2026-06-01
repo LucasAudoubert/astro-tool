@@ -1,0 +1,359 @@
+/* ============================================
+   Space Travel page
+   ============================================ */
+
+.page {
+  padding: 1.5rem 2rem 3rem;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+  overflow: hidden;
+}
+.tab:hover {
+  color: var(--text-primary);
+  border-color: var(--border-light);
+}
+.tabActive {
+  color: white;
+  border-color: transparent;
+}
+.tabBg {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-full);
+  z-index: -1;
+}
+.tabIcon {
+  display: flex;
+}
+
+/* Section */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Controls */
+.controlsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+.select {
+  padding: 0.6rem 1rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+}
+.slider {
+  flex: 1;
+  min-width: 120px;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 4px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-full);
+  outline: none;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(108, 92, 231, 0.5);
+}
+
+/* Voyage Scene */
+.voyageScene {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.voyageTrack {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(180deg, #0a0e1a 0%, #111627 100%);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.starStreak {
+  position: absolute;
+  width: 30px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, white, transparent);
+}
+
+.voyageStart {
+  font-size: 2rem;
+  z-index: 2;
+}
+.voyageEnd {
+  font-size: 2rem;
+  z-index: 2;
+}
+
+.voyagePath {
+  flex: 1;
+  position: relative;
+  height: 3px;
+  margin: 0 1rem;
+}
+.voyagePathLine {
+  width: 100%;
+  height: 100%;
+  background: var(--border-subtle);
+  border-radius: var(--radius-full);
+}
+.voyageRocket {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  filter: drop-shadow(0 0 8px rgba(108, 92, 231, 0.6));
+}
+
+.progressBar {
+  width: 100%;
+  max-width: 500px;
+  height: 4px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.progressFill {
+  height: 100%;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-full);
+  transition: width 0.1s linear;
+}
+
+.launchBtn {
+  padding: 0.7rem 2.5rem;
+  background: var(--gradient-accent);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-glow);
+}
+.launchBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Results */
+.resultsRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 0.75rem;
+}
+.resultBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: center;
+}
+.resultLabel {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.resultValue {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--accent-primary-light);
+  font-family: var(--font-mono);
+}
+
+/* Relativity */
+.relativityVisual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.timeColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+.timeEmoji {
+  font-size: 2.5rem;
+}
+.timeLabel {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.timeValue {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.clockFace {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--border-light);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.clockHand,
+.clockHandSlow {
+  position: absolute;
+  width: 2px;
+  height: 30px;
+  bottom: 50%;
+  left: calc(50% - 1px);
+  transform-origin: bottom center;
+  border-radius: 2px;
+}
+.clockHand {
+  background: var(--accent-primary);
+}
+.clockHandSlow {
+  background: var(--accent-secondary);
+}
+
+.timeSeparator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.gammaLabel {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-warning);
+  font-family: var(--font-mono);
+}
+.separatorLine {
+  width: 1px;
+  height: 60px;
+  background: var(--border-light);
+}
+
+.explanation {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+.explanation strong {
+  color: var(--text-primary);
+}
+.funFact {
+  margin-top: 0.5rem;
+  padding: 0.6rem 0.8rem;
+  background: rgba(253, 203, 110, 0.08);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--accent-warning);
+}
+
+/* Distances */
+.sectionIntro {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.distanceList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.distanceItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.8rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+.distanceInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.distanceName {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.distanceVal {
+  font-size: 0.8rem;
+  color: var(--accent-primary-light);
+  font-family: var(--font-mono);
+}
+.distanceBarWrap {
+  position: relative;
+  height: 6px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.distanceBar {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
+  border-radius: var(--radius-full);
+}
+.distanceKm {
+  position: absolute;
+  right: 0;
+  top: -18px;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}

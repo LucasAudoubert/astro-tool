@@ -1,0 +1,437 @@
+/* ============================================
+   Gravity & Physics page
+   ============================================ */
+
+.page {
+  padding: 1.5rem 2rem 3rem;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+  overflow: hidden;
+}
+
+.tab:hover {
+  color: var(--text-primary);
+  border-color: var(--border-light);
+}
+
+.tabActive {
+  color: white;
+  border-color: transparent;
+}
+
+.tabBg {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-full);
+  z-index: -1;
+}
+
+.tabIcon {
+  display: flex;
+}
+
+.tabLabel {
+  white-space: nowrap;
+}
+
+/* Section */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Input row */
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.input {
+  width: 120px;
+  text-align: center;
+}
+
+.select {
+  padding: 0.6rem 1rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+}
+
+.slider {
+  flex: 1;
+  min-width: 120px;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 4px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-full);
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(108, 92, 231, 0.5);
+}
+
+/* Controls grid */
+.controlsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Result grid (weight) */
+.resultGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 0.75rem;
+}
+
+.resultCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.resultEmoji {
+  font-size: 1.5rem;
+}
+
+.resultName {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.resultWeight {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--accent-primary-light);
+}
+
+.barWrap {
+  height: 4px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  border-radius: var(--radius-full);
+}
+
+.resultGravity {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* Simulation area */
+.simArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.simBackground {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 320px;
+  background: linear-gradient(180deg, #0a0e1a 0%, #111627 80%);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.simSurface {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  opacity: 0.3;
+}
+
+.cube {
+  width: 50px;
+  height: 50px;
+  background: var(--bg-card);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  z-index: 2;
+}
+
+.impactRing {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  opacity: 0.5;
+}
+
+.dropBtn {
+  padding: 0.6rem 2rem;
+  background: var(--gradient-accent);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-glow);
+}
+
+.dropBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Results row */
+.resultsRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.75rem;
+}
+
+.resultBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: center;
+}
+
+.resultBoxLabel {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.resultBoxValue {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--accent-primary-light);
+}
+
+/* Presets */
+.presets {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.presetBtn {
+  padding: 0.45rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.presetBtn:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+/* Force visual */
+.forceVisual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.body1,
+.body2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 2.5rem;
+}
+
+.bodyLabel {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.forceLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 160px;
+}
+
+.forceArrow {
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
+  border-radius: var(--radius-full);
+}
+
+.forceValue {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-secondary);
+  font-family: var(--font-mono);
+}
+
+/* Formula */
+.formula {
+  text-align: center;
+}
+
+.formulaText {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--accent-primary-light);
+  margin-bottom: 0.5rem;
+}
+
+.formulaDetail {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.formulaResult {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-secondary);
+  font-family: var(--font-mono);
+  margin-top: 0.3rem;
+}
+
+/* Escape energy */
+.escapeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.75rem;
+}
+
+.escapeCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.escapeHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.escapeEmoji {
+  font-size: 1.5rem;
+}
+
+.escapeName {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.escapeVel {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.escapeBarWrap {
+  height: 6px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.escapeBar {
+  height: 100%;
+  border-radius: var(--radius-full);
+}
+
+.escapeEnergy {
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--accent-primary-light);
+}
+
+.escapeRocket {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+}

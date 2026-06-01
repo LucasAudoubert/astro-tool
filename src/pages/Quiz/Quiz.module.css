@@ -1,0 +1,326 @@
+/* ============================================
+   Quiz page
+   ============================================ */
+
+.page {
+  padding: 1.5rem 2rem 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Setup */
+.setup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+.setupIcon {
+  color: var(--accent-primary-light);
+  opacity: 0.7;
+}
+.setupTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.setupDesc {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.filterSection {
+  width: 100%;
+  max-width: 500px;
+}
+.filterLabel {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+.filterGrid {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+.filterBtn:hover {
+  border-color: var(--border-light);
+}
+.filterBtnActive {
+  background: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+}
+
+.questionCount {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.startBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  background: var(--gradient-accent);
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-glow);
+  margin-top: 0.5rem;
+}
+.startBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Quiz card */
+.quizCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.quizProgress {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.quizProgressBar {
+  flex: 1;
+  height: 4px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.quizProgressFill {
+  height: 100%;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-full);
+}
+.quizProgressText {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.quizMeta {
+  display: flex;
+  gap: 0.5rem;
+}
+.diffBadge {
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.diff_easy {
+  background: rgba(85, 239, 196, 0.15);
+  color: var(--accent-success);
+}
+.diff_medium {
+  background: rgba(253, 203, 110, 0.15);
+  color: var(--accent-warning);
+}
+.diff_hard {
+  background: rgba(255, 107, 107, 0.15);
+  color: var(--accent-danger);
+}
+.catBadge {
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 500;
+  background: rgba(108, 92, 231, 0.1);
+  color: var(--accent-primary-light);
+  text-transform: capitalize;
+}
+
+.questionText {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Options */
+.optionsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+.option:hover:not(:disabled) {
+  border-color: var(--border-light);
+  background: var(--bg-card-hover);
+}
+.optionCorrect {
+  border-color: var(--accent-success) !important;
+  background: rgba(85, 239, 196, 0.05) !important;
+}
+.optionWrong {
+  border-color: var(--accent-danger) !important;
+  background: rgba(255, 107, 107, 0.05) !important;
+}
+
+.optionLetter {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-surface);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+.optionText {
+  flex: 1;
+  font-size: 0.9rem;
+}
+.optionIcon {
+  flex-shrink: 0;
+}
+
+/* Explanation */
+.explanation {
+  padding: 0.8rem 1rem;
+  background: rgba(108, 92, 231, 0.08);
+  border-left: 3px solid var(--accent-primary);
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  overflow: hidden;
+}
+
+.nextBtn {
+  align-self: flex-end;
+  padding: 0.6rem 1.5rem;
+  background: var(--gradient-accent);
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: var(--radius-full);
+}
+
+/* Results */
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 2rem;
+}
+.resultIcon {
+  font-size: 3rem;
+}
+.resultTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.scoreDisplay {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+.scoreNum {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--accent-primary-light);
+}
+.scoreSep {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+}
+.scoreTotal {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.scorePercent {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.reviewList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+.reviewItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+}
+.reviewCorrect {
+  color: var(--accent-success);
+}
+.reviewWrong {
+  color: var(--accent-danger);
+}
+.reviewIcon {
+  flex-shrink: 0;
+}
+.reviewQuestion {
+  flex: 1;
+  color: var(--text-secondary);
+}
+.reviewAnswer {
+  font-weight: 600;
+  font-size: 0.78rem;
+}
+
+.restartBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.65rem 2rem;
+  background: var(--gradient-accent);
+  color: white;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  margin-top: 1rem;
+}

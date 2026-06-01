@@ -1,0 +1,22 @@
+.card {
+  background: var(--gradient-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  transition: all var(--transition-base);
+}
+
+.hover {
+  cursor: pointer;
+}
+
+.hover:hover {
+  border-color: var(--border-light);
+  background: var(--bg-card-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.glow:hover {
+  box-shadow: var(--shadow-glow-accent);
+  border-color: rgba(108, 92, 231, 0.3);
+}

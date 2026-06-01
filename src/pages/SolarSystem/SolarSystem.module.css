@@ -1,0 +1,345 @@
+/* ============================================
+   Solar System page
+   ============================================ */
+
+.page {
+  padding: 1.5rem 2rem 3rem;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.sectionIntro {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+  overflow: hidden;
+}
+.tab:hover {
+  color: var(--text-primary);
+  border-color: var(--border-light);
+}
+.tabActive {
+  color: white;
+  border-color: transparent;
+}
+.tabBg {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-full);
+  z-index: -1;
+}
+.tabIcon {
+  display: flex;
+}
+.label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+.slider {
+  flex: 1;
+  min-width: 120px;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 4px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-full);
+  outline: none;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(108, 92, 231, 0.5);
+}
+
+/* Speed control */
+.speedControl {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Solar Scene */
+.solarScene {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at center, #0d1120 0%, #0a0e1a 100%);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+}
+
+.solarContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sun {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  z-index: 10;
+}
+
+.orbitPath {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 5;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+.planet:hover {
+  filter: brightness(1.3);
+  z-index: 20;
+}
+
+.planetLabel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  padding-top: 3px;
+  pointer-events: none;
+}
+
+/* Planet info grid */
+.planetGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 0.5rem;
+}
+.planetInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+}
+.planetDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.planetName {
+  font-size: 0.82rem;
+  font-weight: 500;
+  flex: 1;
+}
+.planetPeriod {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* Size Comparison */
+.sizeContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 1.5rem;
+  min-height: 300px;
+  padding: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.sizeItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sizeSphere {
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.sizeName {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.sizeValue {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+/* Ranking Game */
+.gameHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.criteriaSelect {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.criteriaBtn {
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+.criteriaBtn:hover {
+  border-color: var(--border-light);
+}
+.criteriaBtnActive {
+  background: var(--accent-primary);
+  color: white;
+  border-color: var(--accent-primary);
+}
+
+.rankList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.rankItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  cursor: grab;
+  transition: border-color 0.2s;
+  user-select: none;
+}
+.rankItem:active {
+  cursor: grabbing;
+}
+.rankCorrect {
+  border-color: var(--accent-success);
+  background: rgba(85, 239, 196, 0.05);
+}
+.rankWrong {
+  border-color: var(--accent-danger);
+  background: rgba(255, 107, 107, 0.05);
+}
+
+.rankPos {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-surface);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+.rankEmoji {
+  font-size: 1.2rem;
+}
+.rankName {
+  font-size: 0.88rem;
+  font-weight: 600;
+  flex: 1;
+}
+.rankVal {
+  font-size: 0.78rem;
+  color: var(--accent-primary-light);
+  font-family: var(--font-mono);
+}
+.rankDrag {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.gameActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.checkBtn {
+  padding: 0.65rem 2rem;
+  background: var(--gradient-accent);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-glow);
+}
+
+.resetBtn {
+  padding: 0.55rem 1.5rem;
+  background: transparent;
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-primary-light);
+  font-weight: 500;
+  font-size: 0.85rem;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+.resetBtn:hover {
+  background: rgba(108, 92, 231, 0.1);
+}
+
+.scoreCard {
+  text-align: center;
+}
+.scoreText {
+  font-size: 1.1rem;
+  font-weight: 700;
+}

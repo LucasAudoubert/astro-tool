@@ -1,0 +1,260 @@
+/* ============================================
+   Converters page
+   ============================================ */
+
+.page {
+  padding: 1.5rem 2rem 3rem;
+}
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+.tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+  overflow: hidden;
+}
+.tab:hover {
+  color: var(--text-primary);
+  border-color: var(--border-light);
+}
+.tabActive {
+  color: white;
+  border-color: transparent;
+}
+.tabBg {
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-full);
+  z-index: -1;
+}
+.tabIcon {
+  display: flex;
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+.select {
+  padding: 0.6rem 1rem;
+  background: var(--bg-input);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  width: 100%;
+}
+.input {
+  width: 100px;
+  text-align: center;
+}
+.slider {
+  flex: 1;
+  min-width: 120px;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 4px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-full);
+  outline: none;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(108, 92, 231, 0.5);
+}
+
+/* Converter */
+.converterBox {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.unitCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 220px;
+  flex: 1;
+}
+
+.valueInput {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  background: var(--bg-input);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+}
+.valueInput:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.15);
+}
+
+.swapBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  color: var(--accent-primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+.swapBtn:hover {
+  border-color: var(--accent-primary);
+}
+
+.resultDisplay {
+  padding: 0.8rem 1rem;
+  background: rgba(108, 92, 231, 0.08);
+  border: 1px solid rgba(108, 92, 231, 0.2);
+  border-radius: var(--radius-md);
+  text-align: center;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resultNum {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--accent-primary-light);
+  font-family: var(--font-mono);
+}
+
+/* Reference table */
+.refTable {
+  margin-top: 0.5rem;
+}
+.refTitle {
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.refGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.5rem;
+}
+.refItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.refLabel {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+.refValue {
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: var(--accent-primary-light);
+}
+
+/* Age calculator */
+.ageInput {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.ageCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+.ageCard:hover {
+  border-color: var(--border-light);
+}
+
+.ageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 0.3rem;
+}
+.ageEmoji {
+  font-size: 1.3rem;
+}
+.agePlanet {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.ageValue {
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-family: var(--font-mono);
+}
+.ageUnit {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+.agePeriod {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: 0.3rem;
+}
+.ageTag {
+  display: inline-block;
+  margin-top: 0.3rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  font-size: 0.65rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.04);
+  align-self: center;
+}

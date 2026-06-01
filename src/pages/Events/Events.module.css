@@ -1,0 +1,163 @@
+/* ============================================
+   Events page
+   ============================================ */
+
+.page {
+  padding: 1.5rem 2rem 3rem;
+}
+
+/* Featured */
+.featured {
+  position: relative;
+  padding: 2rem 2.5rem;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, #0d1120 0%, #1a1040 50%, #0a1628 100%);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.featuredStars {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.shootingStar {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 4px white;
+}
+
+.featuredContent {
+  position: relative;
+  z-index: 2;
+}
+.featuredBadge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(0, 206, 201, 0.15);
+  border: 1px solid rgba(0, 206, 201, 0.3);
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--accent-secondary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.featuredName {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+.featuredPeak {
+  font-size: 0.9rem;
+  color: var(--accent-secondary);
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+.featuredDesc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  max-width: 500px;
+}
+
+.featuredStats {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.featuredStat {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+/* Calendar */
+.calendarTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.eventGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.75rem;
+}
+
+.eventCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.eventPast {
+  opacity: 0.5;
+}
+
+.eventHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.eventName {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+.eventZhr {
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  background: rgba(108, 92, 231, 0.1);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--accent-primary-light);
+}
+
+.eventPeak {
+  font-size: 0.82rem;
+  color: var(--accent-secondary);
+  font-weight: 500;
+}
+.eventConstellation {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.eventDesc {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.eventSpeed {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+.eventSpeedBar {
+  flex: 1;
+  height: 3px;
+  background: var(--bg-surface);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+.eventSpeedFill {
+  height: 100%;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-full);
+}
+.eventSpeedVal {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
