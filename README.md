@@ -334,6 +334,42 @@ Pour les questions ou les signalements de bugs, ouvre une [issue](https://github
 
 </div>
 
+## 📝 Licence
+
+Ce projet est sous licence **MIT**. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+---
+
+## 👤 Auteur
+
+**Lucas Audoubert**
+
+- GitHub: [@LucasAudoubert](https://github.com/LucasAudoubert)
+
+---
+
+## 🌟 Remerciements
+
+- 🚀 Inspiré par la passion pour l'astronomie et l'éducation spatiale
+- 📚 Données astronomiques de référence scientifique
+- 🎨 Design inspiré par l'espace et l'univers
+
+---
+
+## 📞 Support
+
+Pour les questions ou les signalements de bugs, ouvre une [issue](https://github.com/LucasAudoubert/astro-tool/issues) sur GitHub.
+
+---
+
+<div align="center">
+
+**Fait avec ❤️ pour les passionnés d'astronomie**
+
+⭐ Si tu aimes ce projet, n'oublie pas de laisser une star !
+
+</div>
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
