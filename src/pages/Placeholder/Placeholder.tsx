@@ -7,13 +7,13 @@ import styles from "./Placeholder.module.css";
 interface PlaceholderProps {
   title: string;
   subtitle?: string;
-  emoji?: string;
+  icon?: React.ReactNode;
 }
 
 export default function Placeholder({
   title,
   subtitle,
-  emoji = "🚧",
+  icon = <Construction size={48} />,
 }: PlaceholderProps) {
   return (
     <PageTransition>
@@ -25,14 +25,13 @@ export default function Placeholder({
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <motion.span
-            className={styles.emoji}
+          <motion.div
+            className={styles.iconWrapper}
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            {emoji}
-          </motion.span>
-          <Construction size={32} className={styles.icon} />
+            {icon}
+          </motion.div>
           <h2 className={styles.title}>En construction</h2>
           <p className={styles.desc}>
             Cette section sera bientôt disponible. Reviens bientôt explorer de

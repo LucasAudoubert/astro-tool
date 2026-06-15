@@ -23,53 +23,48 @@ const categories = [
   {
     title: "Gravité &\nPhysique",
     desc: "Poids, chute libre, force gravitationnelle, énergie…",
-    icon: <Weight size={32} />,
+    icon: <Weight size={32} strokeWidth={1.5} />,
     path: "/gravity",
-    color: "#ff6b6b",
-    emoji: "⚖️",
+    color: "#6366F1",
   },
   {
     title: "Voyage spatial\n& Distances",
     desc: "Vitesse lumière, relativité, distances cosmiques…",
-    icon: <Rocket size={32} />,
+    icon: <Rocket size={32} strokeWidth={1.5} />,
     path: "/travel",
-    color: "#74b9ff",
-    emoji: "🚀",
+    color: "#8B5CF6",
   },
   {
     title: "Système\nsolaire",
     desc: "Planètes en temps réel, tailles, âges, position…",
-    icon: <Sun size={32} />,
+    icon: <Sun size={32} strokeWidth={1.5} />,
     path: "/solar-system",
-    color: "#55efc4",
-    emoji: "🪐",
+    color: "#F59E0B",
   },
   {
     title: "Quiz &\nApprentissage",
     desc: "Constellations, culture astro, quiz interactifs…",
-    icon: <GraduationCap size={32} />,
+    icon: <GraduationCap size={32} strokeWidth={1.5} />,
     path: "/quiz",
-    color: "#fdcb6e",
-    emoji: "🎓",
+    color: "#10B981",
   },
   {
     title: "Convertisseurs\n& Calculateurs",
     desc: "Unités astro, âge sur les planètes, et plus…",
-    icon: <ArrowLeftRight size={32} />,
+    icon: <ArrowLeftRight size={32} strokeWidth={1.5} />,
     path: "/converters",
-    color: "#a29bfe",
-    emoji: "🔄",
+    color: "#3B82F6",
   },
 ];
 
 /* ---- Quick tools ---- */
 const quickTools = [
-  { label: "Poids sur Mars", emoji: "⚖️", path: "/gravity" },
-  { label: "Âge sur Jupiter", emoji: "🪐", path: "/converters" },
-  { label: "Distance Terre – Lune", emoji: "🌙", path: "/travel" },
-  { label: "Vitesse lumière", emoji: "💫", path: "/converters" },
-  { label: "Force gravitationnelle", emoji: "🌀", path: "/gravity" },
-  { label: "Énergie de fuite", emoji: "🚀", path: "/gravity" },
+  { label: "Poids sur Mars", icon: <Weight size={16} />, path: "/gravity" },
+  { label: "Âge sur Jupiter", icon: <Sun size={16} />, path: "/converters" },
+  { label: "Distance Terre – Lune", icon: <Rocket size={16} />, path: "/travel" },
+  { label: "Vitesse lumière", icon: <ArrowLeftRight size={16} />, path: "/converters" },
+  { label: "Force gravitationnelle", icon: <Weight size={16} />, path: "/gravity" },
+  { label: "Énergie de fuite", icon: <Rocket size={16} />, path: "/gravity" },
 ];
 
 /* ---- Fake activity ---- */
@@ -106,25 +101,25 @@ const stats = [
     label: "Quizzes complétés",
     value: 24,
     icon: <CheckCircle2 size={16} />,
-    color: "#55efc4",
+    color: "#10B981",
   },
   {
     label: "Outils utilisés",
     value: 15,
     icon: <Wrench size={16} />,
-    color: "#74b9ff",
+    color: "#3B82F6",
   },
   {
     label: "Temps d'exploration",
     value: "18h 42m",
     icon: <Clock size={16} />,
-    color: "#fdcb6e",
+    color: "#F59E0B",
   },
   {
     label: "Badges obtenus",
     value: 8,
     icon: <Award size={16} />,
-    color: "#a29bfe",
+    color: "#8B5CF6",
   },
 ];
 
@@ -134,8 +129,8 @@ export default function Dashboard() {
   return (
     <PageTransition>
       <Header
-        title="Bienvenue Astronaute ! 👋"
-        subtitle="Explore l'univers avec nos outils interactifs"
+        title="Tableau de bord"
+        subtitle="Explorez l'univers avec nos outils professionnels"
       />
 
       <div className={styles.dashboard}>
@@ -211,7 +206,7 @@ export default function Dashboard() {
                   className={styles.catIcon}
                   style={{ background: `${cat.color}20` }}
                 >
-                  <span style={{ fontSize: "1.8rem" }}>{cat.emoji}</span>
+                  <span style={{ color: cat.color }}>{cat.icon}</span>
                 </div>
                 <h3 className={styles.catTitle}>{cat.title}</h3>
                 <p className={styles.catDesc}>{cat.desc}</p>
@@ -236,7 +231,7 @@ export default function Dashboard() {
                 whileTap={{ scale: 0.97 }}
                 onClick={() => navigate(tool.path)}
               >
-                <span className={styles.quickEmoji}>{tool.emoji}</span>
+                <span className={styles.quickIcon}>{tool.icon}</span>
                 <span className={styles.quickLabel}>{tool.label}</span>
               </motion.button>
             ))}

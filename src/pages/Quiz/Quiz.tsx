@@ -73,12 +73,12 @@ export default function Quiz() {
     setAnswers([]);
   };
 
-  const categories: { id: Category; label: string; emoji: string }[] = [
-    { id: "all", label: "Tous", emoji: "🌌" },
-    { id: "constellation", label: "Constellations", emoji: "⭐" },
-    { id: "planet", label: "Planètes", emoji: "🪐" },
-    { id: "physics", label: "Physique", emoji: "⚛️" },
-    { id: "general", label: "Général", emoji: "🔭" },
+  const categories: { id: Category; label: string }[] = [
+    { id: "all", label: "Tous" },
+    { id: "constellation", label: "Constellations" },
+    { id: "planet", label: "Planètes" },
+    { id: "physics", label: "Physique" },
+    { id: "general", label: "Général" },
   ];
 
   const difficulties: { id: Difficulty; label: string; color: string }[] = [
@@ -123,7 +123,7 @@ export default function Quiz() {
                       className={`${styles.filterBtn} ${category === c.id ? styles.filterBtnActive : ""}`}
                       onClick={() => setCategory(c.id)}
                     >
-                      <span>{c.emoji}</span> {c.label}
+                      {c.label}
                     </button>
                   ))}
                 </div>

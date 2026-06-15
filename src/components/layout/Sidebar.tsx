@@ -93,7 +93,7 @@ export default function Sidebar() {
           animate={{ rotate: 360 }}
           transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
         >
-          🪐
+          <Sun size={28} strokeWidth={1.5} />
         </motion.div>
         <div className={styles.logoText}>
           <span className={styles.logoTitle}>LES ENGHIENNOIS</span>

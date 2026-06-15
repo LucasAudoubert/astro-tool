@@ -174,7 +174,9 @@ function VoyageSimulator() {
               />
             ))}
 
-          <div className={styles.voyageStart}>🌍</div>
+          <div className={styles.voyageStart}>
+            <div className={styles.voyageEarth} />
+          </div>
           <div className={styles.voyagePath}>
             <div className={styles.voyagePathLine} />
             <motion.div
@@ -182,10 +184,12 @@ function VoyageSimulator() {
               animate={{ left: animating ? `${progress}%` : "0%" }}
               transition={{ duration: 0.1 }}
             >
-              🚀
+              <div className={styles.voyageRocketIcon} />
             </motion.div>
           </div>
-          <div className={styles.voyageEnd}>⭐</div>
+          <div className={styles.voyageEnd}>
+            <div className={styles.voyageStar} />
+          </div>
         </div>
 
         {/* Progress bar */}
@@ -284,7 +288,7 @@ function RelativityComparator() {
       {/* Visual comparison */}
       <div className={styles.relativityVisual}>
         <div className={styles.timeColumn}>
-          <span className={styles.timeEmoji}>🌍</span>
+          <div className={styles.timeIconEarth} />
           <span className={styles.timeLabel}>Observateur (Terre)</span>
           <motion.div className={styles.clockFace}>
             <motion.div
@@ -302,7 +306,7 @@ function RelativityComparator() {
         </div>
 
         <div className={styles.timeColumn}>
-          <span className={styles.timeEmoji}>🚀</span>
+          <div className={styles.timeIconRocket} />
           <span className={styles.timeLabel}>Voyageur</span>
           <motion.div className={styles.clockFace}>
             <motion.div

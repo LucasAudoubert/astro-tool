@@ -127,12 +127,31 @@
 }
 
 .voyageStart {
-  font-size: 2rem;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.voyageEarth {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4a90d9 0%, #2c5f8d 100%);
+  box-shadow: 0 0 20px rgba(74, 144, 217, 0.5);
 }
 .voyageEnd {
-  font-size: 2rem;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.voyageStar {
+  width: 24px;
+  height: 24px;
+  background: var(--accent-warning);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  box-shadow: 0 0 16px var(--accent-warning);
+  animation: twinkle 2s ease-in-out infinite;
 }
 
 .voyagePath {
@@ -151,8 +170,17 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.5rem;
-  filter: drop-shadow(0 0 8px rgba(108, 92, 231, 0.6));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.6));
+}
+.voyageRocketIcon {
+  width: 24px;
+  height: 24px;
+  background: var(--accent-primary);
+  clip-path: polygon(50% 0%, 70% 100%, 50% 85%, 30% 100%);
+  box-shadow: 0 0 12px var(--accent-primary);
 }
 
 .progressBar {
@@ -224,8 +252,19 @@
   align-items: center;
   gap: 0.6rem;
 }
-.timeEmoji {
-  font-size: 2.5rem;
+.timeIconEarth {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #4a90d9 0%, #2c5f8d 100%);
+  box-shadow: 0 0 24px rgba(74, 144, 217, 0.6);
+}
+.timeIconRocket {
+  width: 48px;
+  height: 48px;
+  background: var(--accent-primary);
+  clip-path: polygon(50% 0%, 70% 100%, 50% 85%, 30% 100%);
+  box-shadow: 0 0 24px rgba(99, 102, 241, 0.6);
 }
 .timeLabel {
   font-size: 0.82rem;

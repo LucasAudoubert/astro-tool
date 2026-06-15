@@ -225,7 +225,10 @@ function AgeCalculator() {
               transition={{ delay: 0.06 * i }}
             >
               <div className={styles.ageHeader}>
-                <span className={styles.ageEmoji}>{planet.emoji}</span>
+                <span 
+                  className={styles.agePlanetIndicator}
+                  style={{ background: planet.color }}
+                />
                 <span className={styles.agePlanet}>{planet.name}</span>
               </div>
               <motion.span

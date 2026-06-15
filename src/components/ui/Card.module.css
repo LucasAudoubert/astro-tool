@@ -18,5 +18,5 @@
 
 .glow:hover {
   box-shadow: var(--shadow-glow-accent);
-  border-color: rgba(108, 92, 231, 0.3);
+  border-color: rgba(99, 102, 241, 0.4);
 }

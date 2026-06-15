@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Search, Command, Bell, X } from "lucide-react";
+import { Search, Command, Bell, X, User } from "lucide-react";
 import styles from "./Header.module.css";
 
 interface HeaderProps {
@@ -96,7 +96,7 @@ export default function Header({ title, subtitle }: HeaderProps) {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          🧑‍🚀
+          <User size={18} />
         </motion.button>
       </div>
     </header>

@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Wrench, Telescope, User, TrendingUp, Award, Settings } from "lucide-react";
 import Layout from "./components/layout/Layout";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Gravity from "./pages/Gravity/Gravity";
@@ -26,7 +27,7 @@ const router = createBrowserRouter([
           <Placeholder
             title="Outils divers"
             subtitle="Calculateurs et outils astronomiques"
-            emoji="🔧"
+            icon={<Wrench size={48} />}
           />
         ),
       },
@@ -36,7 +37,7 @@ const router = createBrowserRouter([
           <Placeholder
             title="Veille astronomique"
             subtitle="Actualités et découvertes récentes"
-            emoji="🔭"
+            icon={<Telescope size={48} />}
           />
         ),
       },
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
           <Placeholder
             title="Mon profil"
             subtitle="Tes statistiques et ton parcours"
-            emoji="👤"
+            icon={<User size={48} />}
           />
         ),
       },
@@ -56,7 +57,7 @@ const router = createBrowserRouter([
           <Placeholder
             title="Progression"
             subtitle="Ton avancement et tes objectifs"
-            emoji="📈"
+            icon={<TrendingUp size={48} />}
           />
         ),
       },
@@ -66,7 +67,7 @@ const router = createBrowserRouter([
           <Placeholder
             title="Badges"
             subtitle="Tes récompenses et achievements"
-            emoji="🏅"
+            icon={<Award size={48} />}
           />
         ),
       },
@@ -76,7 +77,7 @@ const router = createBrowserRouter([
           <Placeholder
             title="Paramètres"
             subtitle="Configuration de l'application"
-            emoji="⚙️"
+            icon={<Settings size={48} />}
           />
         ),
       },
