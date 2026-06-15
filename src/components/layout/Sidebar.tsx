@@ -96,8 +96,8 @@ export default function Sidebar() {
           🪐
         </motion.div>
         <div className={styles.logoText}>
-          <span className={styles.logoTitle}>ASTRO</span>
-          <span className={styles.logoSub}>PLAYGROUND</span>
+          <span className={styles.logoTitle}>LES ENGHIENNOIS</span>
+          <span className={styles.logoSub}>ASTRONOMES</span>
         </div>
       </div>
 

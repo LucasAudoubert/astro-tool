@@ -5,57 +5,52 @@
 :root {
   /* Background tones */
   --bg-primary: #0a0e1a;
-  --bg-secondary: #111627;
-  --bg-tertiary: #161b2e;
-  --bg-card: #171d30;
-  --bg-card-hover: #1c2340;
-  --bg-surface: #1a2036;
-  --bg-input: #131829;
+  --bg-secondary: #0a0e1a;
+  --bg-tertiary: #0a0e1a;
+  --bg-card: #0a0e1a;
+  --bg-card-hover: rgba(255, 255, 255, 0.05);
+  --bg-surface: #0a0e1a;
+  --bg-input: rgba(255, 255, 255, 0.05);
 
   /* Accent colors */
   --accent-primary: #6c5ce7;
-  --accent-primary-light: #a29bfe;
-  --accent-secondary: #00cec9;
-  --accent-warning: #fdcb6e;
-  --accent-danger: #ff6b6b;
-  --accent-success: #55efc4;
-  --accent-info: #74b9ff;
+  --accent-primary-light: #6c5ce7;
+  --accent-secondary: #ffffff;
+  --accent-warning: #ffffff;
+  --accent-danger: #ffffff;
+  --accent-success: #ffffff;
+  --accent-info: #ffffff;
 
   /* Text colors */
-  --text-primary: #e8eaf6;
-  --text-secondary: #8b92b0;
-  --text-muted: #5a6180;
-  --text-accent: #a29bfe;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-muted: rgba(255, 255, 255, 0.5);
+  --text-accent: #6c5ce7;
   --text-on-accent: #ffffff;
 
   /* Borders */
-  --border-subtle: rgba(255, 255, 255, 0.06);
-  --border-light: rgba(255, 255, 255, 0.1);
-  --border-focus: rgba(108, 92, 231, 0.5);
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-light: rgba(255, 255, 255, 0.2);
+  --border-focus: #6c5ce7;
 
   /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 20px rgba(108, 92, 231, 0.15);
-  --shadow-glow-accent: 0 0 30px rgba(108, 92, 231, 0.25);
+  --shadow-glow: 0 0 20px rgba(108, 92, 231, 0.3);
+  --shadow-glow-accent: 0 0 30px rgba(108, 92, 231, 0.5);
 
   /* Gradients */
-  --gradient-hero: linear-gradient(
-    135deg,
-    #0a0e1a 0%,
-    #1a1040 50%,
-    #0a1628 100%
-  );
-  --gradient-card: linear-gradient(145deg, #171d30 0%, #131829 100%);
-  --gradient-accent: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
-  --gradient-sidebar: linear-gradient(180deg, #111627 0%, #0d1120 100%);
+  --gradient-hero: #0a0e1a;
+  --gradient-card: #0a0e1a;
+  --gradient-accent: #6c5ce7;
+  --gradient-sidebar: #0a0e1a;
 
   /* Radii */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 14px;
-  --radius-xl: 20px;
+  --radius-sm: 0px;
+  --radius-md: 2px;
+  --radius-lg: 4px;
+  --radius-xl: 6px;
   --radius-full: 9999px;
 
   /* Spacing */
