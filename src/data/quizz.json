@@ -1,0 +1,1012 @@
+{
+  "astronomy_questions": {
+    "Easy": [
+      {
+        "question": "Quelle est la deuxième planète en partant du Soleil ?",
+        "hint": "Elle est souvent appelée la sœur jumelle de la Terre."
+      },
+      {
+        "question": "Comment s'appelle notre système solaire ?",
+        "hint": "Il porte le nom de l'étoile centrale."
+      },
+      {
+        "question": "Quelle planète est surnommée la 'Planète Rouge' ?",
+        "hint": "Elle possède le plus grand volcan du système solaire."
+      },
+      {
+        "question": "Quel est le plus grand satellite de Saturne ?",
+        "hint": "Il possède une atmosphère dense et des lacs de méthane."
+      },
+      {
+        "question": "Combien y a-t-il de planètes dans notre système solaire ?",
+        "hint": "Il y en a huit depuis le reclassement de Pluton."
+      },
+      {
+        "question": "Quelle est la planète la plus éloignée du Soleil ?",
+        "hint": "C'est une géante de glace découverte par le calcul mathématique."
+      },
+      {
+        "question": "Qu'est-ce qu'une éclipse solaire ?",
+        "hint": "La Lune passe entre la Terre et le Soleil."
+      },
+      {
+        "question": "Quelle est la forme de la Terre ?",
+        "hint": "Elle n'est pas tout à fait une sphère parfaite."
+      },
+      {
+        "question": "Qu'est-ce que la gravité ?",
+        "hint": "La force qui nous attire vers le sol."
+      },
+      {
+        "question": "Quel est le nom de la galaxie où nous vivons ?",
+        "hint": "C'est une galaxie spirale."
+      },
+      {
+        "question": "De quoi est composé principalement le Soleil ?",
+        "hint": "D'hydrogène et d'hélium."
+      },
+      {
+        "question": "Quelle planète possède la célèbre 'Grande Tache Rouge' ?",
+        "hint": "C'est une tempête géante sur Jupiter."
+      },
+      {
+        "question": "Comment appelle-t-on le passage de la Terre devant le Soleil ?",
+        "hint": "Une éclipse."
+      },
+      {
+        "question": "Quelle est la plus petite planète du système solaire ?",
+        "hint": "Mercure."
+      },
+      {
+        "question": "Quel instrument permet d'observer les étoiles de près ?",
+        "hint": "Un télescope."
+      },
+      {
+        "question": "À quoi servent les constellations ?",
+        "hint": "À repérer les étoiles dans le ciel."
+      },
+      {
+        "question": "Quelle est la température du Soleil au centre ?",
+        "hint": "Des millions de degrés."
+      },
+      {
+        "question": "Qu'est-ce qu'un astronaute ?",
+        "hint": "Une personne qui voyage dans l'espace."
+      },
+      {
+        "question": "Quel est le nom de la première femme dans l'espace ?",
+        "hint": "Valentina Terechkova."
+      },
+      {
+        "question": "Quel est le nom du premier homme à avoir marché sur la Lune ?",
+        "hint": "Neil Armstrong."
+      },
+      {
+        "question": "Sur quelle planète vivons-nous ?",
+        "hint": "La troisième planète du système."
+      },
+      {
+        "question": "Combien de lunes a Mars ?",
+        "hint": "Deux : Phobos et Deimos."
+      },
+      {
+        "question": "Qu'est-ce qu'une étoile ?",
+        "hint": "Un astre qui produit sa propre lumière."
+      },
+      {
+        "question": "Quelle est la planète la plus chaude ?",
+        "hint": "Vénus, à cause de son effet de serre."
+      },
+      {
+        "question": "Qu'est-ce qu'une comète ?",
+        "hint": "Un astre de glace et de poussière avec une chevelure."
+      },
+      {
+        "question": "Quel est le nom du vent qui vient du Soleil ?",
+        "hint": "Le vent solaire."
+      },
+      {
+        "question": "Qu'est-ce qu'une année terrestre ?",
+        "hint": "Le temps d'une révolution autour du Soleil."
+      },
+      {
+        "question": "Quel est le nom de la plus grande lune de Jupiter ?",
+        "hint": "Ganymède."
+      },
+      {
+        "question": "Comment appelle-t-on l'étude de l'univers ?",
+        "hint": "L'astronomie."
+      },
+      {
+        "question": "Quelle est la couleur du Soleil vue de l'espace ?",
+        "hint": "Blanc."
+      },
+      {
+        "question": "Combien de temps faut-il à la lumière du Soleil pour atteindre la Terre ?",
+        "hint": "Environ 8 minutes."
+      },
+      {
+        "question": "Quel est le nom du rover qui explore Mars actuellement ?",
+        "hint": "Perseverance (parmi d'autres)."
+      },
+      {
+        "question": "Qu'est-ce qu'un trou noir ?",
+        "hint": "Un objet si dense que même la lumière ne peut en sortir."
+      },
+      {
+        "question": "Qu'est-ce qu'un météore ?",
+        "hint": "Une traînée lumineuse dans l'atmosphère."
+      },
+      {
+        "question": "Quel est le nom de la ceinture d'astéroïdes ?",
+        "hint": "Elle se situe entre Mars et Jupiter."
+      },
+      {
+        "question": "Que signifie 'NASA' ?",
+        "hint": "National Aeronautics and Space Administration."
+      },
+      {
+        "question": "De quelle couleur est le ciel sur Mars ?",
+        "hint": "Plutôt rose ou brunâtre."
+      },
+      {
+        "question": "Quelle est la planète la plus rapide pour orbiter autour du Soleil ?",
+        "hint": "Mercure."
+      },
+      {
+        "question": "Combien de phases lunaires principales y a-t-il ?",
+        "hint": "Quatre : nouvelle, premier quartier, pleine, dernier quartier."
+      },
+      {
+        "question": "Qu'est-ce qu'une nébuleuse ?",
+        "hint": "Un nuage de gaz et de poussières dans l'espace."
+      },
+      {
+        "question": "Quel est le nom de l'étoile polaire ?",
+        "hint": "Polaris."
+      },
+      {
+        "question": "Qu'est-ce qu'une exoplanète ?",
+        "hint": "Une planète hors de notre système solaire."
+      },
+      {
+        "question": "Quel est le rôle d'un satellite artificiel ?",
+        "hint": "Communication, météo ou observation."
+      },
+      {
+        "question": "Qu'est-ce que l'ISS ?",
+        "hint": "La Station Spatiale Internationale."
+      },
+      {
+        "question": "Quelle est la forme de l'orbite des planètes ?",
+        "hint": "Elliptique."
+      },
+      {
+        "question": "Quel est le nom de la galaxie voisine d'Andromède ?",
+        "hint": "La galaxie du Triangle ou la nôtre."
+      },
+      {
+        "question": "Peut-on entendre le son dans l'espace ?",
+        "hint": "Non, c'est le vide."
+      },
+      {
+        "question": "Comment appelle-t-on une personne qui étudie le ciel ?",
+        "hint": "Un astronome."
+      },
+      {
+        "question": "Quel est le nom du Soleil en latin ?",
+        "hint": "Sol."
+      },
+      {
+        "question": "La Lune a-t-elle sa propre lumière ?",
+        "hint": "Non, elle réfléchit celle du Soleil."
+      },
+      {
+        "question": "Quelle est la planète la plus proche du Soleil ?",
+        "hint": "Elle porte le nom du messager des dieux romains."
+      },
+      {
+        "question": "Quel est le nom de notre galaxie ?",
+        "hint": "Cela ressemble à un chemin lacté dans le ciel."
+      },
+      {
+        "question": "Combien de planètes y a-t-il dans notre système solaire ?",
+        "hint": "Le chiffre se situe entre 7 et 9."
+      },
+      {
+        "question": "Quel astre nous éclaire pendant la journée ?",
+        "hint": "C'est une étoile de type naine jaune."
+      },
+      {
+        "question": "De quelle couleur est Mars ?",
+        "hint": "C'est dû à l'oxyde de fer sur sa surface."
+      },
+      {
+        "question": "Quelle est la plus grande planète du système solaire ?",
+        "hint": "Elle porte le nom du roi des dieux romains."
+      },
+      {
+        "question": "Quel est le satellite naturel de la Terre ?",
+        "hint": "Elle a des phases : pleine, nouvelle, croissant..."
+      },
+      {
+        "question": "Comment appelle-t-on une étoile filante ?",
+        "hint": "C'est en réalité un météore qui se consume."
+      },
+      {
+        "question": "Quelle planète possède des anneaux très visibles ?",
+        "hint": "C'est la deuxième plus grande planète du système."
+      },
+      {
+        "question": "Combien de temps met la Terre pour faire le tour du Soleil ?",
+        "hint": "C'est la durée d'une année terrestre."
+      }
+    ],
+    "Medium": [
+      {
+        "question": "Quelle est la durée moyenne d'une orbite de Mars autour du Soleil ?",
+        "hint": "Environ 687 jours terrestres."
+      },
+      {
+        "question": "Qu'est-ce qu'un solstice ?",
+        "hint": "Le moment où le Soleil est à sa position la plus haute ou basse dans le ciel."
+      },
+      {
+        "question": "Quel est le nom de la zone habitable autour d'une étoile ?",
+        "hint": "La zone 'Boucle d'or' (Goldilocks zone)."
+      },
+      {
+        "question": "Quelle est la composition de l'atmosphère de Vénus ?",
+        "hint": "Majoritairement du dioxyde de carbone."
+      },
+      {
+        "question": "À quoi correspond une Unité Astronomique (UA) ?",
+        "hint": "La distance Terre-Soleil (environ 150 millions de km)."
+      },
+      {
+        "question": "Comment nomme-t-on la rotation d'une planète sur elle-même ?",
+        "hint": "Période de rotation (ou jour sidéral)."
+      },
+      {
+        "question": "Qu'est-ce qu'une géante rouge ?",
+        "hint": "Le stade d'évolution d'une étoile en fin de vie."
+      },
+      {
+        "question": "Quel instrument mesure la luminosité d'une étoile ?",
+        "hint": "Un photomètre."
+      },
+      {
+        "question": "Qu'est-ce que la parallaxe stellaire ?",
+        "hint": "Une méthode pour mesurer la distance des étoiles proches."
+      },
+      {
+        "question": "Quel est l'élément le plus abondant dans l'univers ?",
+        "hint": "L'hydrogène."
+      },
+      {
+        "question": "Qu'est-ce que le 'Grand Attracteur' ?",
+        "hint": "Une anomalie gravitationnelle vers laquelle se dirigent les galaxies."
+      },
+      {
+        "question": "Qu'est-ce qu'un amas globulaire ?",
+        "hint": "Un groupement dense de milliers d'étoiles anciennes."
+      },
+      {
+        "question": "Pourquoi la Lune présente-t-elle toujours la même face ?",
+        "hint": "Verrouillage gravitationnel (rotation synchrone)."
+      },
+      {
+        "question": "Qu'est-ce qu'une étoile de type séquence principale ?",
+        "hint": "Une étoile qui fusionne l'hydrogène en hélium."
+      },
+      {
+        "question": "Quelle est la masse du Soleil par rapport à la Terre ?",
+        "hint": "Environ 333 000 fois la masse terrestre."
+      },
+      {
+        "question": "Qu'est-ce qu'une naine brune ?",
+        "hint": "Un objet intermédiaire entre une planète géante et une étoile."
+      },
+      {
+        "question": "Comment les astronomes détectent-ils les exoplanètes ?",
+        "hint": "Par la méthode des transits ou la vitesse radiale."
+      },
+      {
+        "question": "Qu'est-ce qu'un équinoxe ?",
+        "hint": "Le moment où la durée du jour égale celle de la nuit."
+      },
+      {
+        "question": "De quoi sont composés principalement les anneaux de Saturne ?",
+        "hint": "Glace d'eau et débris rocheux."
+      },
+      {
+        "question": "Qu'est-ce qu'un transit astronomique ?",
+        "hint": "Le passage d'un corps céleste devant un autre corps plus grand."
+      },
+      {
+        "question": "Qu'est-ce que le rayonnement ultraviolet ?",
+        "hint": "Un rayonnement invisible plus énergétique que la lumière visible."
+      },
+      {
+        "question": "Quel est le nom de la constellation contenant l'étoile Bételgeuse ?",
+        "hint": "Orion."
+      },
+      {
+        "question": "Pourquoi le ciel est-il bleu sur Terre ?",
+        "hint": "Diffusion de Rayleigh par l'atmosphère."
+      },
+      {
+        "question": "Qu'est-ce qu'une galaxie spirale barrée ?",
+        "hint": "Une galaxie avec une bande centrale d'étoiles."
+      },
+      {
+        "question": "Comment mesure-t-on la température d'une étoile ?",
+        "hint": "Grâce à son spectre lumineux (loi de Wien)."
+      },
+      {
+        "question": "Quelle est la différence entre un météore et une météorite ?",
+        "hint": "Le météore brûle, la météorite atteint le sol."
+      },
+      {
+        "question": "Qu'est-ce que la magnitude apparente ?",
+        "hint": "La luminosité d'un astre vue depuis la Terre."
+      },
+      {
+        "question": "Combien de temps faut-il pour qu'une étoile de type Soleil s'éteigne ?",
+        "hint": "Environ 10 milliards d'années."
+      },
+      {
+        "question": "Qu'est-ce qu'un télescope réfracteur ?",
+        "hint": "Un télescope qui utilise des lentilles."
+      },
+      {
+        "question": "Qu'est-ce qu'un télescope réflecteur ?",
+        "hint": "Un télescope qui utilise des miroirs."
+      },
+      {
+        "question": "Quelle planète tourne à l'envers par rapport aux autres ?",
+        "hint": "Vénus (rotation rétrograde)."
+      },
+      {
+        "question": "Qu'est-ce que le vent solaire ?",
+        "hint": "Un flux de particules chargées provenant de la haute atmosphère solaire."
+      },
+      {
+        "question": "Comment nomme-t-on les taches sombres sur le Soleil ?",
+        "hint": "Taches solaires (zones plus froides)."
+      },
+      {
+        "question": "Qu'est-ce qu'une supernova de type Ia ?",
+        "hint": "Une explosion thermonucléaire d'une naine blanche."
+      },
+      {
+        "question": "Qu'est-ce que l'héliopause ?",
+        "hint": "La limite où le vent solaire rencontre le milieu interstellaire."
+      },
+      {
+        "question": "Quelle est la principale différence entre une planète et une étoile ?",
+        "hint": "La capacité à fusionner l'hydrogène."
+      },
+      {
+        "question": "Quel est le nom de la ceinture au-delà de Neptune ?",
+        "hint": "Ceinture de Kuiper."
+      },
+      {
+        "question": "Qu'est-ce que la matière interstellaire ?",
+        "hint": "Gaz et poussières entre les étoiles."
+      },
+      {
+        "question": "Comment appelle-t-on un regroupement de galaxies ?",
+        "hint": "Un amas de galaxies."
+      },
+      {
+        "question": "Quelle est la durée d'une année sur Jupiter ?",
+        "hint": "Environ 12 années terrestres."
+      },
+      {
+        "question": "Qu'est-ce que le spectre électromagnétique ?",
+        "hint": "L'ensemble de toutes les longueurs d'onde possibles."
+      },
+      {
+        "question": "Qu'est-ce qu'une aurore polaire ?",
+        "hint": "Interaction entre le vent solaire et le champ magnétique terrestre."
+      },
+      {
+        "question": "Qu'est-ce qu'une nébuleuse planétaire ?",
+        "hint": "Enveloppe de gaz expulsée par une étoile mourante."
+      },
+      {
+        "question": "Comment appelle-t-on un satellite tournant en orbite fixe ?",
+        "hint": "Orbite géostationnaire."
+      },
+      {
+        "question": "Quel est le nom de la galaxie dans laquelle nous vivons ?",
+        "hint": "La Voie Lactée."
+      },
+      {
+        "question": "Qu'est-ce qu'un pulsar ?",
+        "hint": "Étoile à neutrons émettant un signal périodique."
+      },
+      {
+        "question": "Quelle est la température de l'espace profond ?",
+        "hint": "Proche du zéro absolu (2,7 K)."
+      },
+      {
+        "question": "Qu'est-ce qu'une étoile variable ?",
+        "hint": "Une étoile dont la luminosité change périodiquement."
+      },
+      {
+        "question": "Comment appelle-t-on une étoile double ?",
+        "hint": "Système binaire."
+      },
+      {
+        "question": "Qu'est-ce qu'un trou noir stellaire ?",
+        "hint": "Résultat de l'effondrement d'une étoile massive."
+      },
+      {
+        "question": "Qu'est-ce qu'une année-lumière ?",
+        "hint": "C'est une unité de distance, pas de temps."
+      },
+      {
+        "question": "Quelle est la différence entre une comète et un astéroïde ?",
+        "hint": "La comète contient beaucoup plus de glace."
+      },
+      {
+        "question": "Quel est le nom de la galaxie la plus proche de la Voie lactée ?",
+        "hint": "Elle porte le nom de la constellation d'Andromède."
+      },
+      {
+        "question": "Qu'est-ce qu'une supernova ?",
+        "hint": "C'est la mort explosive d'une étoile massive."
+      },
+      {
+        "question": "Quelle est la température approximative à la surface du Soleil ?",
+        "hint": "Environ 5 500 degrés Celsius."
+      },
+      {
+        "question": "Qu'est-ce que la ceinture de Kuiper ?",
+        "hint": "Une zone au-delà de Neptune remplie d'objets glacés."
+      },
+      {
+        "question": "À quelle distance moyenne se trouve la Terre du Soleil ?",
+        "hint": "C'est une Unité Astronomique (UA)."
+      },
+      {
+        "question": "Qu'est-ce qu'un pulsar ?",
+        "hint": "Une étoile à neutrons qui tourne très vite sur elle-même."
+      },
+      {
+        "question": "Quel est le nom de la force qui maintient les planètes en orbite ?",
+        "hint": "Elle a été théorisée par Isaac Newton."
+      },
+      {
+        "question": "Quelle est la phase de la Lune où elle est invisible depuis la Terre ?",
+        "hint": "Lorsqu'elle est située entre la Terre et le Soleil."
+      }
+    ],
+    "Hard": [
+      {
+        "question": "Quelle est la limite de Chandrasekhar et sa valeur approximative ?",
+        "hint": "La masse maximale d'une naine blanche, environ 1,4 masse solaire."
+      },
+      {
+        "question": "Qu'est-ce que l'effet Doppler-Fizeau appliqué aux galaxies ?",
+        "hint": "Le décalage vers le rouge indiquant leur éloignement."
+      },
+      {
+        "question": "Quelle est la nature du rayonnement Hawking ?",
+        "hint": "Une émission thermique causée par des effets quantiques près de l'horizon."
+      },
+      {
+        "question": "Qu'est-ce que le paradoxe d'Olbers ?",
+        "hint": "Pourquoi le ciel nocturne est-il noir si l'univers est infini ?"
+      },
+      {
+        "question": "Comment le lithium, le béryllium et le bore sont-ils formés dans l'univers ?",
+        "hint": "Par spallation cosmique."
+      },
+      {
+        "question": "Quelle est la différence entre un trou noir de Kerr et de Schwarzschild ?",
+        "hint": "La rotation (moment cinétique)."
+      },
+      {
+        "question": "Qu'est-ce que l'oscillation des neutrinos ?",
+        "hint": "Le changement de saveur des neutrinos lors de leur propagation."
+      },
+      {
+        "question": "Quel est le mécanisme de fusion nucléaire prédominant dans les étoiles massives ?",
+        "hint": "Le cycle CNO (Carbone-Azote-Oxygène)."
+      },
+      {
+        "question": "Qu'est-ce qu'une étoile de type T Tauri ?",
+        "hint": "Une étoile très jeune en phase de contraction avant la séquence principale."
+      },
+      {
+        "question": "Quelle est la fonction de la constante de Hubble ?",
+        "hint": "Décrire le taux d'expansion de l'univers."
+      },
+      {
+        "question": "Comment le vent solaire interagit-il avec la magnétosphère ?",
+        "hint": "Par reconnexion magnétique et création de courants de Birkeland."
+      },
+      {
+        "question": "Qu'est-ce que le processus r dans la nucléosynthèse ?",
+        "hint": "Capture rapide de neutrons lors d'explosions violentes."
+      },
+      {
+        "question": "Qu'est-ce que le processus s dans la nucléosynthèse ?",
+        "hint": "Capture lente de neutrons dans les étoiles AGB."
+      },
+      {
+        "question": "Quel est le nom de l'ère dominée par la matière dans l'univers ?",
+        "hint": "Ère de la recombinaison."
+      },
+      {
+        "question": "Qu'est-ce que la mesure de la vitesse radiale ?",
+        "hint": "Détection d'exoplanètes via le mouvement de l'étoile hôte."
+      },
+      {
+        "question": "Quel est le rôle de la matière noire dans les galaxies ?",
+        "hint": "Maintenir la courbe de rotation plate à grande distance."
+      },
+      {
+        "question": "Qu'est-ce qu'une naine noire ?",
+        "hint": "Stade hypothétique final d'une naine blanche refroidie."
+      },
+      {
+        "question": "Comment est défini le rayon de Schwarzschild ?",
+        "hint": "2GM/c^2."
+      },
+      {
+        "question": "Qu'est-ce que la distorsion gravitationnelle ?",
+        "hint": "La déviation de la lumière par un objet massif."
+      },
+      {
+        "question": "Quelles sont les implications du théorème de 'no-hair' pour les trous noirs ?",
+        "hint": "Un trou noir n'a que trois propriétés observables."
+      },
+      {
+        "question": "Qu'est-ce que l'inflation dans le modèle cosmologique ?",
+        "hint": "Expansion brutale et rapide de l'univers primordial."
+      },
+      {
+        "question": "Comment les ondes gravitationnelles ont-elles été détectées ?",
+        "hint": "Par interférométrie laser (LIGO/VIRGO)."
+      },
+      {
+        "question": "Qu'est-ce que l'aberration de la lumière ?",
+        "hint": "Déplacement apparent des astres dû au mouvement de l'observateur."
+      },
+      {
+        "question": "Quel est le cycle de Milankovitch ?",
+        "hint": "Variations périodiques de l'orbite terrestre affectant le climat."
+      },
+      {
+        "question": "Qu'est-ce qu'un magnétar ?",
+        "hint": "Une étoile à neutrons avec un champ magnétique extrêmement intense."
+      },
+      {
+        "question": "Comment fonctionne un télescope à synthèse d'ouverture ?",
+        "hint": "Combiner plusieurs signaux pour simuler un grand miroir."
+      },
+      {
+        "question": "Quelle est la limite de Eddington ?",
+        "hint": "Luminosité maximale qu'une étoile peut atteindre en équilibre."
+      },
+      {
+        "question": "Qu'est-ce que la largeur équivalente d'une raie spectrale ?",
+        "hint": "Mesure de l'intensité d'une raie d'absorption ou d'émission."
+      },
+      {
+        "question": "Qu'est-ce que le principe d'équivalence ?",
+        "hint": "Masse gravitationnelle égale masse inertielle."
+      },
+      {
+        "question": "Comment se forment les bras spiraux des galaxies ?",
+        "hint": "Ondes de densité densifiant le milieu interstellaire."
+      },
+      {
+        "question": "Qu'est-ce qu'une galaxie de Seyfert ?",
+        "hint": "Galaxie avec un noyau très actif émettant des raies spectrales larges."
+      },
+      {
+        "question": "Pourquoi les naines blanches ne s'effondrent-elles pas ?",
+        "hint": "Pression de dégénérescence électronique."
+      },
+      {
+        "question": "Qu'est-ce que l'effet Sunyaev-Zeldovich ?",
+        "hint": "Distorsion du fond cosmologique par les amas de galaxies."
+      },
+      {
+        "question": "Qu'est-ce qu'un diagramme Hertzsprung-Russell ?",
+        "hint": "Relation entre magnitude absolue et température stellaire."
+      },
+      {
+        "question": "Comment le fer est-il produit dans les étoiles ?",
+        "hint": "Fusion nucléaire dans les cœurs des étoiles massives."
+      },
+      {
+        "question": "Qu'est-ce que l'énergie du vide ?",
+        "hint": "Énergie associée à l'espace lui-même en mécanique quantique."
+      },
+      {
+        "question": "Quelle est la preuve principale du Big Bang ?",
+        "hint": "Le fond diffus cosmologique (CMB)."
+      },
+      {
+        "question": "Qu'est-ce que la baryogenèse ?",
+        "hint": "Processus théorique produisant une asymétrie matière-antimatière."
+      },
+      {
+        "question": "Qu'est-ce que la cinématique galactique ?",
+        "hint": "Étude des mouvements des étoiles au sein d'une galaxie."
+      },
+      {
+        "question": "Qu'est-ce qu'un trou noir intermédiaire ?",
+        "hint": "Trou noir entre 100 et 100 000 masses solaires."
+      },
+      {
+        "question": "Comment fonctionne la spectrographie échelle ?",
+        "hint": "Séparation des ordres spectraux par un réseau de diffraction."
+      },
+      {
+        "question": "Qu'est-ce que la largeur Doppler ?",
+        "hint": "Élargissement spectral dû à l'agitation thermique."
+      },
+      {
+        "question": "Quelle est l'origine du rayonnement synchroton ?",
+        "hint": "Particules chargées tournant dans un champ magnétique."
+      },
+      {
+        "question": "Qu'est-ce qu'une étoile de type WR (Wolf-Rayet) ?",
+        "hint": "Étoile massive ayant perdu ses couches d'hydrogène."
+      },
+      {
+        "question": "Qu'est-ce que le temps coordonnée de Schwarzschild ?",
+        "hint": "Temps mesuré par un observateur à l'infini."
+      },
+      {
+        "question": "Comment la poussière interstellaire affecte-t-elle la lumière ?",
+        "hint": "Par extinction et rougissement interstellaire."
+      },
+      {
+        "question": "Qu'est-ce qu'un amas ouvert ?",
+        "hint": "Groupe lâche de quelques centaines d'étoiles jeunes."
+      },
+      {
+        "question": "Qu'est-ce qu'une galaxie elliptique ?",
+        "hint": "Galaxie pauvre en gaz avec peu de formation stellaire."
+      },
+      {
+        "question": "Qu'est-ce que la luminosité bolométrique ?",
+        "hint": "Luminosité totale sur toutes les longueurs d'onde."
+      },
+      {
+        "question": "Qu'est-ce que le mouvement propre d'une étoile ?",
+        "hint": "Mouvement angulaire apparent dans le ciel."
+      },
+      {
+        "question": "Qu'est-ce que le rayonnement de fond cosmologique ?",
+        "hint": "C'est l'écho lumineux du Big Bang."
+      },
+      {
+        "question": "Comment appelle-t-on la limite d'un trou noir d'où rien ne peut s'échapper ?",
+        "hint": "L'horizon des..."
+      },
+      {
+        "question": "Quelle est la loi qui relie la distance d'une galaxie à sa vitesse de récession ?",
+        "hint": "Loi de Hubble-Lemaître."
+      },
+      {
+        "question": "Qu'est-ce que la matière noire ?",
+        "hint": "Une matière invisible qui exerce une attraction gravitationnelle."
+      },
+      {
+        "question": "Quelle est la composition principale d'une naine blanche ?",
+        "hint": "C'est le résidu d'une étoile après qu'elle ait épuisé son carburant."
+      },
+      {
+        "question": "Qu'est-ce qu'un quasar ?",
+        "hint": "Le noyau très brillant d'une galaxie active lointaine."
+      },
+      {
+        "question": "Qu'est-ce que la limite de Roche ?",
+        "hint": "La distance minimale à laquelle un satellite peut s'approcher d'un corps sans être disloqué."
+      },
+      {
+        "question": "Comment appelle-t-on le processus de fusion nucléaire dans le Soleil ?",
+        "hint": "Chaîne proton-proton."
+      },
+      {
+        "question": "Qu'est-ce qu'une lentille gravitationnelle ?",
+        "hint": "La courbure de la lumière par un corps massif."
+      },
+      {
+        "question": "Quel est le nom du point où la gravité est infinie au centre d'un trou noir ?",
+        "hint": "Singularité."
+      }
+    ],
+    "Impossible": [
+      {
+        "question": "Quelle est la valeur exacte de la constante cosmologique ?",
+        "hint": "Elle est liée à l'énergie du vide et est extrêmement petite."
+      },
+      {
+        "question": "Quelle théorie unifie la relativité générale et la mécanique quantique ?",
+        "hint": "Graal de la physique moderne (Gravité quantique)."
+      },
+      {
+        "question": "Qu'est-ce que l'énergie sombre exactement au niveau quantique ?",
+        "hint": "Un mystère qui accélère l'expansion de l'univers."
+      },
+      {
+        "question": "Quel était l'état exact de l'univers à l'instant t=0 ?",
+        "hint": "Une singularité initiale."
+      },
+      {
+        "question": "Combien de dimensions sont prédites par la théorie des cordes ?",
+        "hint": "10 ou 11 dimensions au total."
+      },
+      {
+        "question": "Qu'est-ce que le multivers ?",
+        "hint": "L'hypothèse selon laquelle notre univers n'est qu'un parmi d'autres."
+      },
+      {
+        "question": "Quelle est la nature du boson de Higgs en astronomie ?",
+        "hint": "C'est le champ qui donne la masse aux particules."
+      },
+      {
+        "question": "Comment s'appelle l'effet de distorsion temporelle proche d'une singularité ?",
+        "hint": "Dilatation temporelle gravitationnelle."
+      },
+      {
+        "question": "Quel est le destin final de l'univers selon le Big Rip ?",
+        "hint": "La déchirure de l'espace-temps lui-même."
+      },
+      {
+        "question": "Quelle est la densité de Planck ?",
+        "hint": "Une valeur limite théorique (environ 10^96 kg/m3)."
+      },
+      {
+        "question": "Qu'est-ce que l'inflation cosmique primordiale ?",
+        "hint": "Une phase d'expansion exponentielle juste après le Big Bang."
+      },
+      {
+        "question": "Quelle est la vitesse d'expansion actuelle de l'univers ?",
+        "hint": "Constante de Hubble (environ 70 km/s/Mpc)."
+      },
+      {
+        "question": "Comment calculer l'entropie d'un trou noir ?",
+        "hint": "Via la formule de Bekenstein-Hawking."
+      },
+      {
+        "question": "Qu'est-ce que le paradoxe de Fermi ?",
+        "hint": "Le conflit entre la probabilité de vie extraterrestre et l'absence de preuves."
+      },
+      {
+        "question": "Quelle est la différence entre un trou noir de Kerr et de Schwarzschild ?",
+        "hint": "L'un est en rotation, l'autre est statique."
+      },
+      {
+        "question": "Qu'est-ce que le rayonnement de Hawking ?",
+        "hint": "L'émission thermique prédite pour les trous noirs."
+      },
+      {
+        "question": "Quel est le mécanisme derrière la formation des trous noirs supermassifs ?",
+        "hint": "Accrétion continue et fusions galactiques."
+      },
+      {
+        "question": "Qu'est-ce que le principe holographique en cosmologie ?",
+        "hint": "La réduction de l'information d'un volume sur sa surface."
+      },
+      {
+        "question": "Quelle est la masse de Planck ?",
+        "hint": "L'échelle à laquelle les effets quantiques deviennent cruciaux."
+      },
+      {
+        "question": "Qu'est-ce que la symétrie CP dans l'univers jeune ?",
+        "hint": "La violation de cette symétrie expliquerait l'asymétrie matière-antimatière."
+      },
+      {
+        "question": "Quelle est la nature du champ inflaton au début de l'univers ?",
+        "hint": "Un champ scalaire responsable de l'expansion exponentielle."
+      },
+      {
+        "question": "Quel est le destin de l'univers si la constante cosmologique varie avec le temps ?",
+        "hint": "Le modèle de l'énergie noire dynamique (quintessence)."
+      },
+      {
+        "question": "Comment définir mathématiquement l'intérieur d'un trou de ver de Morris-Thorne ?",
+        "hint": "Via une métrique de trou de ver traversable nécessitant de l'énergie exotique."
+      },
+      {
+        "question": "Quelle est la valeur de la masse du graviton théorique ?",
+        "hint": "Théoriquement zéro ou extrêmement proche de zéro."
+      },
+      {
+        "question": "Quel est le problème de la hiérarchie en physique des particules ?",
+        "hint": "La disparité gigantesque entre l'échelle faible et l'échelle de Planck."
+      },
+      {
+        "question": "Comment la théorie des cordes résout-elle le problème de la singularité ?",
+        "hint": "Par l'extension des objets (cordes) au lieu de points ponctuels."
+      },
+      {
+        "question": "Quel est l'effet de la violation de la condition d'énergie nulle ?",
+        "hint": "Elle permet la création de zones de densité d'énergie négative."
+      },
+      {
+        "question": "Quelle est la signature des ondes gravitationnelles primordiales ?",
+        "hint": "Les modes B dans la polarisation du fond diffus cosmologique."
+      },
+      {
+        "question": "Comment calculer l'entropie holographique d'un espace anti-de Sitter ?",
+        "hint": "Via la correspondance AdS/CFT."
+      },
+      {
+        "question": "Quel est le rôle des instantons dans l'univers jeune ?",
+        "hint": "Solutions classiques aux équations de champ en espace euclidien."
+      },
+      {
+        "question": "Pourquoi la symétrie CP est-elle nécessaire à la baryogenèse ?",
+        "hint": "Pour permettre un excès de matière sur l'antimatière."
+      },
+      {
+        "question": "Quel est l'impact de la condensation de Bose-Einstein sur la matière noire ?",
+        "hint": "L'hypothèse des axions comme matière noire froide."
+      },
+      {
+        "question": "Qu'est-ce que l'espace-temps de Gödel ?",
+        "hint": "Une solution aux équations d'Einstein autorisant les boucles temporelles."
+      },
+      {
+        "question": "Comment définit-on la température de Hawking à partir de l'accélération de Unruh ?",
+        "hint": "L'observateur accéléré perçoit un rayonnement thermique."
+      },
+      {
+        "question": "Quelle est la différence entre un trou noir de Reissner-Nordström et de Kerr ?",
+        "hint": "La présence d'une charge électrique en plus de la rotation."
+      },
+      {
+        "question": "Qu'est-ce que le spectre de puissance des fluctuations primordiales ?",
+        "hint": "La distribution de la matière selon l'échelle de fluctuation."
+      },
+      {
+        "question": "Comment s'explique l'asymétrie matière-antimatière par le mécanisme de Seesaw ?",
+        "hint": "Par l'existence de neutrinos très lourds."
+      },
+      {
+        "question": "Quel est le paradoxe de l'information dans les trous noirs ?",
+        "hint": "La perte apparente d'information quantique après évaporation."
+      },
+      {
+        "question": "Quelle est la densité de l'énergie du vide calculée par la théorie quantique des champs ?",
+        "hint": "Environ 120 ordres de grandeur au-dessus de la valeur observée."
+      },
+      {
+        "question": "Qu'est-ce que l'anisotropie dipolaire du fond diffus cosmologique ?",
+        "hint": "Le mouvement global de notre système vers le grand attracteur."
+      },
+      {
+        "question": "Comment la supersymétrie modifie-t-elle les constantes de couplage ?",
+        "hint": "En unifiant les forces fondamentales à haute énergie."
+      },
+      {
+        "question": "Quel est le rôle des cordes cosmiques dans la formation des grandes structures ?",
+        "hint": "Défauts topologiques dans l'espace-temps."
+      },
+      {
+        "question": "Qu'est-ce qu'une singularité nue ?",
+        "hint": "Une singularité sans horizon des événements (interdite par la censure cosmique)."
+      },
+      {
+        "question": "Quelle est la nature du 'Big Bounce' dans la cosmologie quantique à boucles ?",
+        "hint": "Le rebond de l'univers lors de la phase de contraction maximale."
+      },
+      {
+        "question": "Comment expliquer l'inflation par le potentiel du champ inflaton ?",
+        "hint": "Par la pente douce (slow-roll) du potentiel."
+      },
+      {
+        "question": "Quelle est la relation entre l'entropie de Bekenstein et l'aire de l'horizon ?",
+        "hint": "L'entropie est proportionnelle au quart de l'aire en unités de Planck."
+      },
+      {
+        "question": "Quel est le concept de la gravité émergente ?",
+        "hint": "La gravité comme phénomène statistique plutôt que fondamental."
+      },
+      {
+        "question": "Quelle est la preuve de l'existence des dimensions supplémentaires en théorie des cordes ?",
+        "hint": "La nécessité de la consistance mathématique des anomalies."
+      },
+      {
+        "question": "Qu'est-ce que le rayonnement de Hawking-Unruh ?",
+        "hint": "L'analogie entre accélération et horizon gravitationnel."
+      },
+      {
+        "question": "Comment les trous noirs supermassifs s'évaporent-ils par accrétion de rayonnement ?",
+        "hint": "En gagnant plus de masse par CMB qu'ils n'en perdent."
+      },
+      {
+        "question": "Qu'est-ce que le fond diffus de neutrinos ?",
+        "hint": "Le rayonnement relique des neutrinos découplés 1 seconde après le Big Bang."
+      },
+      {
+        "question": "Quelle est la valeur de la constante de structure fine ?",
+        "hint": "Environ 1/137 (constante sans dimension)."
+      },
+      {
+        "question": "Comment le principe holographique résout-il le paradoxe de l'information ?",
+        "hint": "En codant l'information du volume sur la surface limite."
+      },
+      {
+        "question": "Qu'est-ce que l'espace-temps de de Sitter ?",
+        "hint": "Une solution d'univers en expansion accélérée permanente."
+      },
+      {
+        "question": "Qu'est-ce qu'une métrique de Taub-NUT ?",
+        "hint": "Solution avec une charge magnétique gravitationnelle (masse de torsion)."
+      },
+      {
+        "question": "Quelle est la nature du boson de Goldstone en cosmologie ?",
+        "hint": "Particule sans masse apparaissant lors de la brisure de symétrie."
+      },
+      {
+        "question": "Comment définir la métrique d'un univers anisotrope de Bianchi ?",
+        "hint": "En introduisant des taux d'expansion différents selon les directions."
+      },
+      {
+        "question": "Quel est l'impact de l'énergie noire sur la structure à grande échelle ?",
+        "hint": "Freinage de la croissance des amas de galaxies."
+      },
+      {
+        "question": "Qu'est-ce que le modèle de Randall-Sundrum ?",
+        "hint": "Modèle avec des dimensions supplémentaires courbées."
+      },
+      {
+        "question": "Quelle est la masse du boson de Higgs et pourquoi est-ce un problème ?",
+        "hint": "Problème de la naturalité (trop légère sans fine-tuning)."
+      },
+      {
+        "question": "Comment le principe anthropique est-il utilisé en cosmologie ?",
+        "hint": "Pour expliquer les valeurs des constantes permettant la vie."
+      },
+      {
+        "question": "Qu'est-ce que l'oscillation baryonique acoustique ?",
+        "hint": "Des ondes sonores figées dans la distribution de la matière."
+      },
+      {
+        "question": "Quel est l'effet de la courbure spatiale sur l'expansion ?",
+        "hint": "Un univers fermé, ouvert ou plat (Omega = 1)."
+      },
+      {
+        "question": "Qu'est-ce qu'une singularité de type Belinski-Khalatnikov-Lifshitz ?",
+        "hint": "Le comportement chaotique de la métrique près d'une singularité."
+      },
+      {
+        "question": "Comment la théorie de la gravitation quantique à boucles quantifie-t-elle l'espace ?",
+        "hint": "Par des réseaux de spin et des volumes discrets."
+      },
+      {
+        "question": "Quelle est la nature de l'asymétrie de la polarisation du CMB ?",
+        "hint": "Mélange des modes E et B par lentilles gravitationnelles."
+      },
+      {
+        "question": "Qu'est-ce que le modèle de quintessence ?",
+        "hint": "Champ scalaire variable expliquant l'accélération de l'expansion."
+      },
+      {
+        "question": "Comment la température de Planck est-elle définie ?",
+        "hint": "L'échelle où les effets quantiques dominent la gravité."
+      },
+      {
+        "question": "Quel est le destin des trous noirs dans un univers en expansion infinie ?",
+        "hint": "L'évaporation finale via le rayonnement de Hawking."
+      },
+      {
+        "question": "Qu'est-ce que la mesure de la non-gaussianité dans le CMB ?",
+        "hint": "Indice sur les interactions lors de l'inflation."
+      }
+    ]
+  }
+}
