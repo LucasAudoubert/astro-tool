@@ -15,5 +15,17 @@ export default defineConfig({
       strict: true,
       allow: ["."], // Autorise uniquement le dossier actuel
     },
+    // Proxy /api/* to the Node proxy server (port 5174)
+    proxy: {
+      "/api": {
+        target: "http://localhost:5174",
+        changeOrigin: true,
+      },
+    },
+  },
+  build: {
+    // Make sure no secret ever leaks to the client bundle.
+    // Anything in .env that isn't VITE_* is excluded by Vite already.
+    sourcemap: false,
   },
 });

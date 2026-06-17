@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Wrench, Telescope, User, TrendingUp, Award, Settings } from "lucide-react";
 import Layout from "./components/layout/Layout";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import WorkstationDashboard from "./components/workstation/WorkstationDashboard";
 import Gravity from "./pages/Gravity/Gravity";
 import Travel from "./pages/Travel/Travel";
 import SolarSystem from "./pages/SolarSystem/SolarSystem";
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       { index: true, element: <Dashboard /> },
+      { path: "workstation", element: <WorkstationDashboard /> },
       { path: "gravity", element: <Gravity /> },
       { path: "travel", element: <Travel /> },
       { path: "solar-system", element: <SolarSystem /> },

@@ -4,14 +4,20 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently -k -n proxy,web -c cyan,magenta \"node server/server.js\" \"vite\"",
+    "dev:proxy": "node server/server.js",
+    "dev:web": "vite",
     "build": "tsc -b && vite build",
+    "start": "concurrently -k -n proxy,web -c cyan,magenta \"node server/server.js\" \"vite preview --port 5173\"",
+    "serve": "node server/server.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@types/three": "^0.184.1",
     "clsx": "^2.1.1",
+    "concurrently": "^9.2.1",
+    "dotenv": "^16.6.1",
     "framer-motion": "^12.40.0",
     "lucide-react": "^1.18.0",
     "react": "^19.2.6",

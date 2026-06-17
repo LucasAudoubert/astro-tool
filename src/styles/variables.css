@@ -22,6 +22,22 @@
   --accent-success: #10B981; /* Emerald - Life */
   --accent-info: #3B82F6; /* Blue - Neptune */
 
+  /* Workstation tokens - Figma-style precise UI */
+  --ws-bg: #0a0a0c;
+  --ws-bg-elevated: #0f0f12;
+  --ws-bg-overlay: rgba(255, 255, 255, 0.02);
+  --ws-border: rgba(255, 255, 255, 0.08);
+  --ws-border-strong: rgba(255, 255, 255, 0.14);
+  --ws-border-accent: rgba(0, 240, 255, 0.45);
+  --ws-cyan: #00f0ff;
+  --ws-cyan-dim: rgba(0, 240, 255, 0.12);
+  --ws-cyan-glow: rgba(0, 240, 255, 0.35);
+  --ws-text: #e8e8ec;
+  --ws-text-dim: #8a8a93;
+  --ws-text-mute: #55555c;
+  --ws-grid-line: rgba(255, 255, 255, 0.04);
+  --ws-alert: #ff4d4d;
+
   /* Text colors */
   --text-primary: #F9FAFB;
   --text-secondary: #D1D5DB;
