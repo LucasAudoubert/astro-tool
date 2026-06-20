@@ -1,11 +1,27 @@
 /* ============================================
    Workstation — Figma-style precise UI
-   Deep matte black, ultra-thin wireframes,
-   electric cyan accents, mono data readouts
+   Palette: Black / Prussian Blue / Orange / Alabaster
    ============================================ */
 
 .root {
   --pad: 1.5rem;
+
+  /* Local palette override — scoped to /workstation only */
+  --ws-bg: #000000;
+  --ws-bg-elevated: #14213d;
+  --ws-bg-overlay: rgba(229, 229, 229, 0.04);
+  --ws-border: rgba(229, 229, 229, 0.12);
+  --ws-border-strong: rgba(229, 229, 229, 0.22);
+  --ws-border-accent: rgba(252, 163, 17, 0.55);
+  --ws-cyan: #fca311;
+  --ws-cyan-dim: rgba(252, 163, 17, 0.14);
+  --ws-cyan-glow: rgba(252, 163, 17, 0.4);
+  --ws-text: #ffffff;
+  --ws-text-dim: #e5e5e5;
+  --ws-text-mute: #8a8a93;
+  --ws-grid-line: rgba(229, 229, 229, 0.05);
+  --ws-alert: #ff4d4d;
+
   background: var(--ws-bg);
   color: var(--ws-text);
   min-height: calc(100vh - 0px);
@@ -154,7 +170,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--ws-cyan);
+  background: var(--ws-alert);
   box-shadow: 0 0 8px var(--ws-cyan-glow);
   animation: pulse 2s ease-in-out infinite;
 }
@@ -266,8 +282,8 @@
   flex: 1;
   border: 1px solid var(--ws-border-strong);
   background:
-    radial-gradient(ellipse at 30% 40%, rgba(0, 240, 255, 0.04), transparent 60%),
-    linear-gradient(180deg, #0d0d10 0%, #06060a 100%);
+    radial-gradient(ellipse at 30% 40%, rgba(252, 163, 17, 0.05), transparent 60%),
+    linear-gradient(180deg, #14213d 0%, #000000 100%);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -285,7 +301,7 @@
     radial-gradient(1px 1px at 85% 60%, #fff, transparent),
     radial-gradient(1px 1px at 15% 85%, rgba(255, 255, 255, 0.5), transparent),
     radial-gradient(1px 1px at 55% 45%, #fff, transparent),
-    radial-gradient(2px 2px at 90% 15%, rgba(0, 240, 255, 0.5), transparent);
+    radial-gradient(2px 2px at 90% 15%, rgba(252, 163, 17, 0.6), transparent);
   opacity: 0.6;
 }
 
@@ -295,9 +311,9 @@
   height: 220px;
   border-radius: 50%;
   background:
-    radial-gradient(circle at 35% 30%, #d8e8ff 0%, #6f7fa8 25%, #1d2238 60%, #050610 100%);
+    radial-gradient(circle at 35% 30%, #e5e5e5 0%, #6f7fa8 25%, #14213d 60%, #000000 100%);
   box-shadow:
-    0 0 60px rgba(0, 240, 255, 0.18),
+    0 0 60px rgba(252, 163, 17, 0.2),
     inset -20px -20px 60px rgba(0, 0, 0, 0.6);
 }
 
@@ -409,7 +425,7 @@
   gap: 0.6rem;
   padding: 0.7rem 1.1rem;
   background: var(--ws-cyan);
-  color: #001214;
+  color: #000000;
   font-size: 11.5px;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -608,7 +624,7 @@
   position: relative;
   aspect-ratio: 1 / 1;
   background:
-    radial-gradient(ellipse at center, rgba(99, 60, 30, 0.18) 0%, rgba(20, 12, 6, 0.6) 60%, #0a0a0c 100%);
+    radial-gradient(ellipse at center, rgba(252, 163, 17, 0.14) 0%, rgba(20, 12, 6, 0.5) 60%, #000000 100%);
   overflow: hidden;
   cursor: pointer;
   transition: all 200ms ease;
@@ -616,7 +632,7 @@
 
 .roverItem:hover {
   background:
-    radial-gradient(ellipse at center, rgba(0, 240, 255, 0.12) 0%, rgba(20, 12, 6, 0.6) 60%, #0a0a0c 100%);
+    radial-gradient(ellipse at center, rgba(252, 163, 17, 0.22) 0%, rgba(20, 12, 6, 0.5) 60%, #000000 100%);
 }
 
 .roverItem::before {
@@ -721,7 +737,7 @@
   top: 0;
   left: 0;
   bottom: 0;
-  background: linear-gradient(90deg, var(--ws-cyan) 0%, rgba(0, 240, 255, 0.4) 100%);
+  background: linear-gradient(90deg, var(--ws-cyan) 0%, rgba(252, 163, 17, 0.4) 100%);
   box-shadow: 0 0 8px var(--ws-cyan-glow);
 }
 
@@ -858,12 +874,12 @@
 .xpSeg:last-child { border-right: none; }
 
 .xpSegFilled {
-  background: linear-gradient(90deg, var(--ws-cyan) 0%, rgba(0, 240, 255, 0.6) 100%);
+  background: linear-gradient(90deg, var(--ws-cyan) 0%, rgba(252, 163, 17, 0.6) 100%);
   box-shadow: 0 0 6px var(--ws-cyan-glow);
 }
 
 .xpSegPartial {
-  background: linear-gradient(90deg, var(--ws-cyan) 0%, rgba(0, 240, 255, 0.3) 60%, transparent 100%);
+  background: linear-gradient(90deg, var(--ws-cyan) 0%, rgba(252, 163, 17, 0.3) 60%, transparent 100%);
 }
 
 .profileFooter {

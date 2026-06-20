@@ -98,7 +98,8 @@ export function useThreeScene(
     // Setup renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
     renderer.setSize(width, height);
-    renderer.setPixelRatio(window.devicePixelRatio);
+    // Cap pixelRatio at 2 — huge perf win on 4K/Retina without visible quality loss
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     containerRef.current.appendChild(renderer.domElement);
     rendererRef.current = renderer;
 
@@ -109,8 +110,10 @@ export function useThreeScene(
     controls.autoRotate = false;
     controls.enableZoom = true;
     controls.enablePan = true;
-    controls.minDistance = 10;
+    controls.minDistance = 5;
     controls.maxDistance = 500;
+    controls.zoomSpeed = 0.8;
+    controls.rotateSpeed = 0.6;
     controlsRef.current = controls;
 
     // Ajouter lumières
