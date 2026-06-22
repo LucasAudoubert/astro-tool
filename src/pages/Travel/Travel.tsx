@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Rocket, Clock, Ruler } from "lucide-react";
+import { Rocket, Clock, Ruler, Lightbulb } from "lucide-react";
 import Header from "../../components/layout/Header";
 import PageTransition from "../../components/ui/PageTransition";
 import Card from "../../components/ui/Card";
@@ -341,8 +341,8 @@ function RelativityComparator() {
         </p>
         {speedPercent >= 90 && (
           <p className={styles.funFact}>
-            💡 Si tu voyageais à {speedPercent}% de c pendant 10 ans terrestres,
-            tu reviendrais plus jeune de{" "}
+            <Lightbulb size={14} /> Si tu voyageais à {speedPercent}% de c
+            pendant 10 ans terrestres, tu reviendrais plus jeune de{" "}
             {(earthYears - travelerYears).toFixed(2)} ans par rapport à tes amis
             !
           </p>

@@ -4,6 +4,7 @@ import { Sun, Maximize2, Trophy } from "lucide-react";
 import Header from "../../components/layout/Header";
 import PageTransition from "../../components/ui/PageTransition";
 import Card from "../../components/ui/Card";
+import PlanetIcon from "../../components/ui/PlanetIcon";
 import SolarSystemViewer from "../../components/ui/SolarSystemViewer";
 import { planets } from "../../data/planets";
 import styles from "./SolarSystem.module.css";
@@ -93,7 +94,8 @@ function SizeComparison() {
                 whileHover={{ scale: 1.1 }}
               />
               <span className={styles.sizeName}>
-                {planet.emoji} {planet.name}
+                <PlanetIcon src={planet.icon} alt={planet.name} size={20} />{" "}
+                {planet.name}
               </span>
               <span className={styles.sizeValue}>
                 {planet.radius.toLocaleString("fr-FR")} km
@@ -198,7 +200,9 @@ function RankingGame() {
               }}
             >
               <span className={styles.rankPos}>{i + 1}</span>
-              <span className={styles.rankEmoji}>{planet.emoji}</span>
+              <span className={styles.rankEmoji}>
+                <PlanetIcon src={planet.icon} alt={planet.name} size={22} />
+              </span>
               <span className={styles.rankName}>{planet.name}</span>
               {checked && (
                 <span className={styles.rankVal}>
@@ -229,7 +233,7 @@ function RankingGame() {
             <Card hover={false} className={styles.scoreCard}>
               <span className={styles.scoreText}>
                 {score === planets.length
-                  ? "🎉 Parfait !"
+                  ? "Parfait !"
                   : `${score}/${planets.length} correct${score !== null && score > 1 ? "s" : ""}`}
               </span>
             </Card>

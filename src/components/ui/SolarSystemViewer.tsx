@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, useCallback } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { Play, Pause, X } from "lucide-react";
 import styles from "./SolarSystemViewer.module.css";
 import { PLANETS, SUN, J2000_EPOCH, keplerPosition, compactDistance, type PlanetData } from "./planetData";
 import {
@@ -478,7 +479,7 @@ export default function SolarSystemViewer() {
             onClick={() => setPaused((p) => !p)}
             aria-label={paused ? "Lecture" : "Pause"}
           >
-            {paused ? "▶ Lecture" : "❚❚ Pause"}
+            {paused ? <><Play size={14} /> Lecture</> : <><Pause size={14} /> Pause</>}
           </button>
           <button className={styles.buttonGhost} onClick={() => focusOnPlanet(null)}>
             Vue globale
@@ -551,7 +552,7 @@ export default function SolarSystemViewer() {
               <h3 style={{ color: activePlanet.color }}>{activePlanet.name}</h3>
               {selectedName === activePlanet.name && (
                 <button className={styles.infoClose} onClick={() => focusOnPlanet(null)} aria-label="Fermer">
-                  ✕
+                  <X size={14} />
                 </button>
               )}
             </div>

@@ -72,3 +72,72 @@ export function fetchApod(date?: string): Promise<{ data: ApodResponse; cached: 
   const q = date ? `?date=${encodeURIComponent(date)}` : "";
   return jsonFetch<{ data: ApodResponse; cached: boolean }>(`/apod${q}`);
 }
+
+/* ---------- EPIC (DSCOVR) ---------- */
+export interface EpicImage {
+  identifier: string;
+  caption: string;
+  date: string;
+  imageUrl: string;
+  thumbnailUrl: string;
+  centroidLat?: number;
+  centroidLon?: number;
+}
+export interface EpicResponse {
+  date: string;
+  count: number;
+  images: EpicImage[];
+  cached: boolean;
+}
+export function fetchEpic(date?: string): Promise<EpicResponse> {
+  const q = date ? `?date=${encodeURIComponent(date)}` : "";
+  return jsonFetch<EpicResponse>(`/epic${q}`);
+}
+
+/* ---------- DONKI · Solar Flares (FLR) ---------- */
+export type FlareClass = "B" | "C" | "M" | "X";
+export interface SolarFlare {
+  flrID: string;
+  startTime: string;
+  peakTime: string;
+  endTime: string;
+  classType: string; // e.g. "M2.3"
+  intensity: 0 | 1 | 2 | 3 | 4;
+  peak: number;
+  location?: string;
+  activeRegion?: number;
+}
+export interface SolarFlareResponse {
+  startDate: string;
+  count: number;
+  flares: SolarFlare[];
+  cached: boolean;
+}
+export function fetchSolarFlares(startDate?: string): Promise<SolarFlareResponse> {
+  const q = startDate ? `?startDate=${encodeURIComponent(startDate)}` : "";
+  return jsonFetch<SolarFlareResponse>(`/donki/flr${q}`);
+}
+
+/* ---------- InSight · Mars Weather ---------- */
+export interface MarsWeatherResponse {
+  archived: boolean;
+  latestSol?: string;
+  season?: string;
+  temperature?: { avg?: number; min?: number; max?: number; unit?: string };
+  wind?: {
+    avg?: number;
+    min?: number;
+    max?: number;
+    unit?: string;
+    direction?: string;
+  };
+  pressure?: { avg?: number; min?: number; max?: number; unit?: string };
+  firstUtc?: string;
+  lastUtc?: string;
+  error?: string;
+  message?: string;
+  cached: boolean;
+}
+export function fetchMarsWeather(): Promise<MarsWeatherResponse> {
+  return jsonFetch<MarsWeatherResponse>(`/insight`);
+}

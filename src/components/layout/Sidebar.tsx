@@ -14,6 +14,8 @@ import {
   TrendingUp,
   Award,
   Settings,
+  PanelLeftClose,
+  PanelLeftOpen,
 } from "lucide-react";
 import clsx from "clsx";
 import styles from "./Sidebar.module.css";
@@ -81,11 +83,30 @@ const navigation: NavSection[] = [
   },
 ];
 
-export default function Sidebar() {
+interface SidebarProps {
+  collapsed: boolean;
+  onToggle: () => void;
+}
+
+export default function Sidebar({ collapsed, onToggle }: SidebarProps) {
   const location = useLocation();
 
   return (
-    <aside className={styles.sidebar}>
+    <aside
+      className={clsx(styles.sidebar, collapsed && styles.sidebarCollapsed)}
+      aria-expanded={!collapsed}
+    >
+      {/* Toggle button */}
+      <button
+        type="button"
+        className={styles.toggleBtn}
+        onClick={onToggle}
+        aria-label={collapsed ? "Ouvrir la barre latérale" : "Fermer la barre latérale"}
+        title={collapsed ? "Ouvrir" : "Fermer"}
+      >
+        {collapsed ? <PanelLeftOpen size={16} /> : <PanelLeftClose size={16} />}
+      </button>
+
       {/* Logo */}
       <div className={styles.logo}>
         <motion.div
@@ -95,17 +116,19 @@ export default function Sidebar() {
         >
           <Sun size={28} strokeWidth={1.5} />
         </motion.div>
-        <div className={styles.logoText}>
-          <span className={styles.logoTitle}>LES ENGHIENNOIS</span>
-          <span className={styles.logoSub}>ASTRONOMES</span>
-        </div>
+        {!collapsed && (
+          <div className={styles.logoText}>
+            <span className={styles.logoTitle}>LES ENGHIENNOIS</span>
+            <span className={styles.logoSub}>ASTRONOMES</span>
+          </div>
+        )}
       </div>
 
       {/* Navigation */}
       <nav className={styles.nav}>
         {navigation.map((section, i) => (
           <div key={i} className={styles.section}>
-            {section.title && (
+            {!collapsed && section.title && (
               <span className={styles.sectionTitle}>{section.title}</span>
             )}
             <ul className={styles.navList}>
@@ -118,7 +141,9 @@ export default function Sidebar() {
                       className={clsx(
                         styles.navItem,
                         isActive && styles.active,
+                        collapsed && styles.navItemCollapsed,
                       )}
+                      title={collapsed ? item.label : undefined}
                     >
                       {isActive && (
                         <motion.div
@@ -132,7 +157,9 @@ export default function Sidebar() {
                         />
                       )}
                       <span className={styles.navIcon}>{item.icon}</span>
-                      <span className={styles.navLabel}>{item.label}</span>
+                      {!collapsed && (
+                        <span className={styles.navLabel}>{item.label}</span>
+                      )}
                     </NavLink>
                   </li>
                 );
@@ -143,23 +170,29 @@ export default function Sidebar() {
       </nav>
 
       {/* User card */}
-      <div className={styles.userCard}>
+      <div
+        className={clsx(styles.userCard, collapsed && styles.userCardCollapsed)}
+      >
         <div className={styles.userAvatar}>
-          <span>🧑‍🚀</span>
+          <User size={20} />
         </div>
-        <div className={styles.userInfo}>
-          <span className={styles.userName}>Astronaute</span>
-          <span className={styles.userLevel}>Niveau 12</span>
-        </div>
-        <div className={styles.xpBar}>
-          <motion.div
-            className={styles.xpFill}
-            initial={{ width: 0 }}
-            animate={{ width: "62.5%" }}
-            transition={{ duration: 1.2, ease: "easeOut", delay: 0.5 }}
-          />
-        </div>
-        <span className={styles.xpText}>1 250 / 2 000 XP</span>
+        {!collapsed && (
+          <>
+            <div className={styles.userInfo}>
+              <span className={styles.userName}>Astronaute</span>
+              <span className={styles.userLevel}>Niveau 12</span>
+            </div>
+            <div className={styles.xpBar}>
+              <motion.div
+                className={styles.xpFill}
+                initial={{ width: 0 }}
+                animate={{ width: "62.5%" }}
+                transition={{ duration: 1.2, ease: "easeOut", delay: 0.5 }}
+              />
+            </div>
+            <span className={styles.xpText}>1 250 / 2 000 XP</span>
+          </>
+        )}
       </div>
     </aside>
   );

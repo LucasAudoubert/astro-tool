@@ -143,7 +143,11 @@
 }
 
 .resultEmoji {
-  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
 }
 
 .resultName {
@@ -396,7 +400,11 @@
 }
 
 .escapeEmoji {
-  font-size: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
 }
 
 .escapeName {

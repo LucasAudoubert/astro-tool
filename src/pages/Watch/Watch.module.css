@@ -1,0 +1,491 @@
+/* ============================================
+   Watch · Veille astronomique
+   Hub de surveillance + module météo plein écran
+   ============================================ */
+
+.page {
+  padding: 1.5rem 2rem 3rem;
+}
+
+/* ---- Hero banner ---- */
+.heroBanner {
+  position: relative;
+  padding: 2.25rem 2.5rem;
+  border-radius: var(--radius-xl);
+  background:
+    radial-gradient(ellipse at 80% 50%, rgba(108, 92, 231, 0.18), transparent 60%),
+    radial-gradient(ellipse at 20% 110%, rgba(0, 206, 201, 0.12), transparent 60%),
+    linear-gradient(135deg, #0d1120 0%, #1a1040 50%, #0a1628 100%);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  margin-bottom: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.heroBannerContent {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  min-width: 0;
+}
+
+.kicker {
+  display: inline-block;
+  padding: 0.3rem 0.85rem;
+  background: rgba(108, 92, 231, 0.15);
+  border: 1px solid rgba(108, 92, 231, 0.35);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--accent-primary-light);
+  letter-spacing: 0.18em;
+  margin-bottom: 0.85rem;
+}
+
+.heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  margin: 0 0 0.6rem;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #fff 0%, #b9a8ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroSub {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 640px;
+}
+
+.liveDot {
+  color: #00e676;
+  text-shadow: 0 0 8px rgba(0, 230, 118, 0.7);
+}
+
+.heroOrnament {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+.heroOrbit {
+  position: absolute;
+  inset: 0;
+  border: 1px dashed rgba(108, 92, 231, 0.35);
+  border-radius: 50%;
+  animation: spin 60s linear infinite;
+}
+
+.heroOrbitSmall {
+  position: absolute;
+  inset: 28px;
+  border: 1px dashed rgba(0, 206, 201, 0.3);
+  border-radius: 50%;
+  animation: spin 30s linear infinite reverse;
+}
+
+.heroStar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fff, rgba(255, 255, 255, 0));
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.6);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ---- Module grid ---- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.85rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 1.25rem 1.35rem 1.35rem;
+  background: linear-gradient(
+    135deg,
+    rgba(108, 92, 231, 0.06) 0%,
+    rgba(0, 206, 201, 0.03) 100%
+  );
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  color: inherit;
+  transition: all 250ms cubic-bezier(0.2, 0.8, 0.2, 1);
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(108, 92, 231, 0.12),
+    transparent 40%
+  );
+  opacity: 0;
+  transition: opacity 250ms;
+  pointer-events: none;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.cardIcon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-md);
+  background: rgba(108, 92, 231, 0.12);
+  border: 1px solid rgba(108, 92, 231, 0.25);
+  color: var(--accent-primary-light);
+}
+
+.cardIconLive {
+  background: linear-gradient(135deg, rgba(108, 92, 231, 0.2), rgba(0, 206, 201, 0.2));
+  border-color: rgba(0, 206, 201, 0.45);
+  color: var(--accent-secondary);
+  box-shadow: 0 0 16px rgba(0, 206, 201, 0.18);
+}
+
+.cardStatus {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  padding: 0.25rem 0.55rem;
+  border-radius: var(--radius-full);
+}
+
+.cardStatusLive {
+  background: rgba(0, 230, 118, 0.12);
+  border: 1px solid rgba(0, 230, 118, 0.4);
+  color: #00e676;
+  text-shadow: 0 0 8px rgba(0, 230, 118, 0.4);
+}
+
+.cardStatusSoon {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  position: relative;
+  z-index: 1;
+}
+
+.cardDesc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.cardCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent-secondary);
+  position: relative;
+  z-index: 1;
+}
+
+.cardSoon {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.cardSoon:hover {
+  transform: none !important;
+}
+
+/* ============================================
+   Fullscreen weather · Astrospheric
+   ============================================ */
+.fullscreen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background:
+    radial-gradient(ellipse at top, rgba(108, 92, 231, 0.08), transparent 60%),
+    #05060f;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 250ms ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ---- Top control bar ---- */
+.controlBar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.5rem;
+  background: rgba(13, 17, 32, 0.85);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.9rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 200ms ease;
+  white-space: nowrap;
+}
+
+.backBtn:hover {
+  background: rgba(108, 92, 231, 0.15);
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+.controlBarCenter {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 1;
+  min-width: 200px;
+}
+
+.controlBarIcon {
+  color: var(--accent-secondary);
+  flex-shrink: 0;
+}
+
+.controlBarText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.controlBarTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.controlBarSub {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.presetGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.presetIcon {
+  color: var(--text-muted);
+  margin-right: 0.25rem;
+}
+
+.presetChip {
+  padding: 0.35rem 0.7rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 180ms ease;
+  white-space: nowrap;
+}
+
+.presetChip:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+}
+
+.presetChipActive {
+  background: rgba(108, 92, 231, 0.2);
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+  box-shadow: 0 0 12px rgba(108, 92, 231, 0.25);
+}
+
+.iconBtn {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: 50%;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 180ms ease;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.iconBtn:hover {
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+  background: rgba(108, 92, 231, 0.12);
+}
+
+/* ---- Embed stage ---- */
+.embedStage {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 1.5rem;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at center, rgba(108, 92, 231, 0.06), transparent 70%);
+}
+
+.embedOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+}
+
+.embedOverlay strong {
+  font-size: 1rem;
+  color: var(--text-primary);
+  letter-spacing: 0.08em;
+}
+
+.embedContainer {
+  width: 100%;
+  max-width: 924px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---- Bottom status footer ---- */
+.controlFoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.55rem 1.5rem;
+  background: rgba(13, 17, 32, 0.85);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-top: 1px solid var(--border-subtle);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .heroBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.75rem 1.5rem;
+  }
+  .heroOrnament {
+    display: none;
+  }
+  .controlBar {
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+  }
+  .controlBarCenter {
+    flex-basis: 100%;
+    order: 2;
+  }
+  .presetGroup {
+    order: 3;
+    flex-basis: 100%;
+  }
+  .controlFoot {
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+  }
+}

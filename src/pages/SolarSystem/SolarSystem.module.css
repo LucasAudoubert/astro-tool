@@ -289,7 +289,11 @@
   color: var(--text-muted);
 }
 .rankEmoji {
-  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
 }
 .rankName {
   font-size: 0.88rem;

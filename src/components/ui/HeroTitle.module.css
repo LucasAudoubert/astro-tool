@@ -1,0 +1,37 @@
+/* ============================================
+   HeroTitle — Interactive parallax title
+   ============================================ */
+
+.title {
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: var(--text-primary);
+  cursor: default;
+  /* Réserve pour les glyphes italiques qui débordent */
+  padding-right: 0.12em;
+}
+
+.line {
+  display: block;
+  overflow: visible;
+}
+
+.letter {
+  display: inline-block;
+  letter-spacing: 0.08em;
+  will-change: transform;
+}
+
+.accent {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding-right: 0.12em;
+}

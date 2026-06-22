@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import PageTransition from "../../components/ui/PageTransition";
 import CosmicBackground from "../../components/ui/CosmicBackground";
+import HeroTitle from "../../components/ui/HeroTitle";
 import styles from "./Dashboard.module.css";
 
 /* ---- Quick destinations ---- */
@@ -63,16 +64,12 @@ export default function Dashboard() {
             {greeting}, explorateur
           </motion.span>
 
-          <h1 className={styles.title}>
-            <span className={styles.titleLine}>
-              <span className={styles.titleWord}>Explorez</span>
-            </span>
-            <span className={styles.titleLine}>
-              <span className={`${styles.titleWord} ${styles.titleAccent}`}>
-                l'univers
-              </span>
-            </span>
-          </h1>
+          <HeroTitle
+            lines={[
+              { text: "Explorez" },
+              { text: "l'univers", accent: true },
+            ]}
+          />
 
           <motion.p
             className={styles.subtitle}

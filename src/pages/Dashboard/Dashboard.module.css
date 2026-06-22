@@ -42,52 +42,7 @@
   opacity: 0.6;
 }
 
-.title {
-  font-size: clamp(3rem, 9vw, 6.5rem);
-  font-weight: 800;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
-  margin: 0;
-  color: var(--text-primary);
-}
 
-.titleLine {
-  display: block;
-  overflow: hidden;
-}
-
-.titleWord {
-  display: inline-block;
-  animation: wordRise 1s cubic-bezier(0.2, 0.8, 0.2, 1) both;
-}
-
-.titleLine:nth-child(1) .titleWord {
-  animation-delay: 0.1s;
-}
-
-.titleLine:nth-child(2) .titleWord {
-  animation-delay: 0.3s;
-}
-
-.titleAccent {
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-style: italic;
-  font-weight: 700;
-}
-
-@keyframes wordRise {
-  from {
-    transform: translateY(110%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
 
 .subtitle {
   font-size: clamp(1rem, 1.5vw, 1.15rem);

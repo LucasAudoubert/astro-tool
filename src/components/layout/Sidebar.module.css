@@ -16,6 +16,43 @@
   z-index: 100;
   overflow-y: auto;
   overflow-x: hidden;
+  transition: width var(--transition-base);
+}
+
+.sidebarCollapsed {
+  width: var(--sidebar-width-collapsed);
+  padding: 1.25rem 0.5rem;
+}
+
+/* Toggle button */
+.toggleBtn {
+  position: absolute;
+  top: 1rem;
+  right: 8px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  cursor: pointer;
+  z-index: 110;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
+}
+
+.toggleBtn:hover {
+  background: var(--gradient-accent);
+  color: var(--text-on-accent);
+  border-color: transparent;
+  transform: scale(1.05);
+}
+
+.toggleBtn:active {
+  transform: scale(0.95);
 }
 
 /* Logo */
@@ -26,12 +63,18 @@
   padding: 0.25rem 0.5rem 1.25rem;
 }
 
+.sidebarCollapsed .logo {
+  justify-content: center;
+  padding: 0.25rem 0 1.25rem;
+}
+
 .logoIcon {
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--accent-primary);
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .logoText {
@@ -94,6 +137,11 @@
   overflow: hidden;
 }
 
+.navItemCollapsed {
+  justify-content: center;
+  padding: 0.6rem;
+}
+
 .navItem:hover {
   color: var(--text-primary);
   background: rgba(255, 255, 255, 0.04);
@@ -137,6 +185,11 @@
   gap: 0.6rem;
 }
 
+.userCardCollapsed {
+  justify-content: center;
+  padding: 0.5rem;
+}
+
 .userAvatar {
   width: 36px;
   height: 36px;
@@ -146,6 +199,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
+  flex-shrink: 0;
 }
 
 .userInfo {

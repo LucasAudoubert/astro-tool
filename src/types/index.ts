@@ -10,7 +10,7 @@ export interface Planet {
   orbitalPeriod: number; // Earth days
   distanceFromSun: number; // AU
   color: string;
-  emoji: string;
+  icon: string; // path to /public asset (e.g. "/planets/mercury.png")
   escapeVelocity: number; // km/s
   type: "rocky" | "gas" | "ice" | "dwarf";
 }
@@ -19,7 +19,7 @@ export interface Moon {
   name: string;
   gravity: number;
   parentPlanet: string;
-  emoji: string;
+  icon: string;
 }
 
 export interface Constellation {

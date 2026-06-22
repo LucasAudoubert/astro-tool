@@ -124,7 +124,7 @@ export default function Events() {
                 </div>
                 <span className={styles.eventPeak}>{shower.peak}</span>
                 <span className={styles.eventConstellation}>
-                  📍 {shower.constellation}
+                  <MapPin size={12} /> {shower.constellation}
                 </span>
                 <p className={styles.eventDesc}>{shower.description}</p>
                 <div className={styles.eventSpeed}>

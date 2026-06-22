@@ -43,6 +43,8 @@
   line-height: 1.05;
   letter-spacing: -0.03em;
   margin: 0;
+  /* Réserve pour les lettres italiques du <em> accentué qui débordent */
+  padding-right: 0.12em;
 }
 
 .homeTitle em {
@@ -298,11 +300,13 @@
 }
 
 .qText {
+  font-family: var(--font-sans);
   font-size: clamp(1.2rem, 2.4vw, 1.6rem);
-  font-weight: 700;
-  line-height: 1.35;
+  font-weight: 600;
+  line-height: 1.4;
   margin: 0;
   color: var(--text-primary);
+  letter-spacing: -0.005em;
 }
 
 .actions {

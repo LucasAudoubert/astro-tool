@@ -930,3 +930,375 @@
 .statusbarItemVal {
   color: var(--ws-text-dim);
 }
+
+/* ===========================
+   EPIC · DSCOVR Earth Imagery
+   =========================== */
+.epicLayout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 1px;
+  background: var(--ws-border);
+  flex: 1;
+  min-height: 240px;
+}
+
+.epicHero {
+  position: relative;
+  background:
+    radial-gradient(circle at 35% 30%, rgba(108, 92, 231, 0.18), transparent 60%),
+    var(--ws-bg);
+  overflow: hidden;
+  min-height: 220px;
+}
+
+.epicHeroImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.92;
+}
+
+.epicHeroFallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: var(--ws-text-mute);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.epicSide {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.75rem;
+  background: var(--ws-bg);
+}
+
+.epicSideHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.epicCaption {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--ws-text-dim);
+  text-transform: uppercase;
+}
+
+.epicThumbs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.epicThumb {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid var(--ws-border);
+  background: var(--ws-bg-elevated);
+  cursor: pointer;
+  padding: 0;
+  transition: all 150ms ease;
+}
+
+.epicThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.7;
+}
+
+.epicThumb:hover img {
+  opacity: 1;
+}
+
+.epicThumbActive {
+  border-color: var(--ws-cyan);
+  box-shadow: 0 0 0 1px var(--ws-cyan);
+}
+
+.epicThumbActive img {
+  opacity: 1;
+}
+
+.epicThumbMore {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--ws-text-mute);
+  border: 1px dashed var(--ws-border);
+}
+
+.epicLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+  color: var(--ws-cyan);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-top: 0.25rem;
+}
+
+.epicLink:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   DONKI · Solar Flare Log
+   =========================== */
+.flareWindow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ws-border);
+}
+
+.flareStats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--ws-border);
+  margin: 0.6rem 0;
+}
+
+.flareStatCell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0.5rem 0.4rem;
+  background: var(--ws-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.flareStatKey {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.flareStatVal {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ws-text);
+}
+
+.flareStatBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  transition: width 250ms ease;
+}
+
+.flareCallout {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.6rem;
+  background: var(--ws-bg-elevated);
+  border: 1px solid var(--ws-border);
+  margin-bottom: 0.5rem;
+}
+
+.flareCalloutLabel {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.14em;
+  color: var(--ws-text-mute);
+}
+
+.flareCalloutClass {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.flareCalloutMeta {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--ws-text-dim);
+  margin-left: auto;
+  letter-spacing: 0.04em;
+}
+
+.flareList {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--ws-border);
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.flareRow {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 0.5rem;
+  background: var(--ws-bg);
+  font-family: var(--font-mono);
+  font-size: 10px;
+}
+
+.flareClass {
+  display: inline-grid;
+  place-items: center;
+  padding: 2px 6px;
+  border: 1px solid;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.flareTime {
+  color: var(--ws-text-dim);
+  letter-spacing: 0.02em;
+}
+
+.flareRegion {
+  color: var(--ws-text-mute);
+  letter-spacing: 0.06em;
+}
+
+.flareEmpty {
+  padding: 1rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--ws-text-mute);
+  letter-spacing: 0.08em;
+}
+
+/* ===========================
+   InSight · Mars Weather
+   =========================== */
+.marsSeason {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ws-border);
+}
+
+.marsSeasonVal {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ws-text);
+  letter-spacing: 0.04em;
+}
+
+.marsMetrics {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--ws-border);
+  margin: 0.6rem 0;
+}
+
+.marsMetric {
+  background: var(--ws-bg);
+  padding: 0.55rem 0.6rem;
+}
+
+.marsMetricHead {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.16em;
+  color: var(--ws-text-mute);
+  margin-bottom: 4px;
+}
+
+.marsMetricBody {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.marsMetricAvg {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ws-text);
+  line-height: 1;
+}
+
+.marsMetricAvg small {
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--ws-text-mute);
+  margin-left: 4px;
+}
+
+.marsMetricRange {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--ws-text-dim);
+  letter-spacing: 0.04em;
+}
+
+.marsFoot {
+  margin-top: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  color: var(--ws-text-mute);
+  letter-spacing: 0.06em;
+  text-align: right;
+}
+
+.marsArchived {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border: 1px dashed var(--ws-alert);
+  background: rgba(255, 77, 77, 0.06);
+}
+
+.marsArchived strong {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--ws-alert);
+  margin-bottom: 0.25rem;
+}
+
+.marsArchived p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--ws-text-dim);
+}
+
+@media (max-width: 1024px) {
+  .epicLayout {
+    grid-template-columns: 1fr;
+  }
+}

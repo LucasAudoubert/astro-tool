@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeftRight, Calendar } from "lucide-react";
+import { ArrowLeftRight, Calendar, TrendingDown, TrendingUp } from "lucide-react";
 import Header from "../../components/layout/Header";
 import PageTransition from "../../components/ui/PageTransition";
 import Card from "../../components/ui/Card";
@@ -252,7 +252,8 @@ function AgeCalculator() {
                 terrestres
               </span>
               <span className={styles.ageTag}>
-                {isOlder ? "👴 Plus vieux" : "👶 Plus jeune"}
+                {isOlder ? <TrendingDown size={14} /> : <TrendingUp size={14} />}{" "}
+                {isOlder ? "Plus vieux" : "Plus jeune"}
               </span>
             </motion.div>
           );

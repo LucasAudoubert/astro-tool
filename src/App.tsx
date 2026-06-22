@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Wrench, Telescope, User, TrendingUp, Award, Settings } from "lucide-react";
+import { Wrench, User, TrendingUp, Award, Settings } from "lucide-react";
 import Layout from "./components/layout/Layout";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import WorkstationDashboard from "./components/workstation/WorkstationDashboard";
@@ -9,6 +9,7 @@ import SolarSystem from "./pages/SolarSystem/SolarSystem";
 import Quiz from "./pages/Quiz/Quiz";
 import Converters from "./pages/Converters/Converters";
 import Events from "./pages/Events/Events";
+import Watch from "./pages/Watch/Watch";
 import Placeholder from "./pages/Placeholder/Placeholder";
 
 const router = createBrowserRouter([
@@ -35,13 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path: "watch",
-        element: (
-          <Placeholder
-            title="Veille astronomique"
-            subtitle="Actualités et découvertes récentes"
-            icon={<Telescope size={48} />}
-          />
-        ),
+        element: <Watch />,
       },
       {
         path: "profile",

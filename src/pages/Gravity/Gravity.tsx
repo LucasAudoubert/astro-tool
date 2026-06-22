@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Weight, ArrowDown, Zap, Orbit } from "lucide-react";
+import { Weight, ArrowDown, Zap, Orbit, Rocket } from "lucide-react";
 import Header from "../../components/layout/Header";
 import PageTransition from "../../components/ui/PageTransition";
 import Card from "../../components/ui/Card";
+import PlanetIcon from "../../components/ui/PlanetIcon";
 import { planets, moons, materials } from "../../data/planets";
 import { G } from "../../data/constants";
 import styles from "./Gravity.module.css";
@@ -111,7 +112,9 @@ function WeightCalculator() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.04 * i }}
             >
-              <span className={styles.resultEmoji}>{body.emoji}</span>
+              <span className={styles.resultEmoji}>
+                <PlanetIcon src={body.icon} alt={body.name} size={28} />
+              </span>
               <span className={styles.resultName}>{body.name}</span>
               <span className={styles.resultWeight}>{weight} kg</span>
               <div className={styles.barWrap}>
@@ -170,7 +173,7 @@ function FreeFall() {
           >
             {planets.map((p) => (
               <option key={p.name} value={p.name}>
-                {p.emoji} {p.name}
+                {p.name}
               </option>
             ))}
           </select>
@@ -187,7 +190,7 @@ function FreeFall() {
           >
             {materials.map((m) => (
               <option key={m.name} value={m.name}>
-                {m.emoji} {m.name} ({m.density} kg/m³)
+                {m.name} ({m.density} kg/m³)
               </option>
             ))}
           </select>
@@ -224,7 +227,7 @@ function FreeFall() {
               if (dropping) setTimeout(() => setDropping(false), 1500);
             }}
           >
-            <span>{selectedMaterial.emoji}</span>
+            <span>{selectedMaterial.name.charAt(0)}</span>
           </motion.div>
           {dropping && (
             <motion.div
@@ -347,7 +350,7 @@ function GravForce() {
           animate={{ scale: [1, 1.05, 1] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <span>🌍</span>
+          <span>1</span>
           <span className={styles.bodyLabel}>{m1Label}</span>
         </motion.div>
         <div className={styles.forceLine}>
@@ -363,7 +366,7 @@ function GravForce() {
           animate={{ scale: [1, 1.05, 1] }}
           transition={{ duration: 2, repeat: Infinity, delay: 1 }}
         >
-          <span>🌙</span>
+          <span>2</span>
           <span className={styles.bodyLabel}>{m2Label}</span>
         </motion.div>
       </div>
@@ -463,7 +466,9 @@ function EscapeEnergy() {
               transition={{ delay: 0.06 * i }}
             >
               <div className={styles.escapeHeader}>
-                <span className={styles.escapeEmoji}>{planet.emoji}</span>
+                <span className={styles.escapeEmoji}>
+                  <PlanetIcon src={planet.icon} alt={planet.name} size={28} />
+                </span>
                 <div>
                   <span className={styles.escapeName}>{planet.name}</span>
                   <span className={styles.escapeVel}>
@@ -490,7 +495,7 @@ function EscapeEnergy() {
                 animate={{ y: [0, -5, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.2 }}
               >
-                🚀
+                <Rocket size={18} />
               </motion.span>
             </motion.div>
           );

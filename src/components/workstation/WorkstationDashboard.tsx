@@ -5,6 +5,9 @@ import NeoFeed from "./NeoFeed";
 import MarsRoverFeed from "./MarsRoverFeed";
 import SpaceWeatherPanel from "./SpaceWeatherPanel";
 import ProfileNode from "./ProfileNode";
+import EpicEarthFeed from "./EpicEarthFeed";
+import SolarFlareLog from "./SolarFlareLog";
+import MarsWeatherPanel from "./MarsWeatherPanel";
 import styles from "./Workstation.module.css";
 
 const NAV_LINKS = [
@@ -63,8 +66,11 @@ export default function WorkstationDashboard() {
           {/* ---- GRID WORKSTATION ---- */}
           <div className={styles.grid}>
             <ApodHero />
-            <NeoFeed />
+            <EpicEarthFeed />
             <MarsRoverFeed />
+            <NeoFeed />
+            <SolarFlareLog />
+            <MarsWeatherPanel />
             <SpaceWeatherPanel />
             <ProfileNode />
           </div>
@@ -79,7 +85,7 @@ export default function WorkstationDashboard() {
               <div className={styles.statusbarItem}>
                 <span>APIs</span>
                 <span className={styles.statusbarItemVal}>
-                  NASA · DONKI · NeoWs
+                  APOD · EPIC · NeoWs · DONKI · InSight
                 </span>
               </div>
               <div className={styles.statusbarItem}>
