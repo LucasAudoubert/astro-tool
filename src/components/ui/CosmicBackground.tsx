@@ -119,7 +119,6 @@ export default function CosmicBackground() {
               height: `${p.size}px`,
               animationDelay: `${p.delay}s`,
               animationDuration: `${p.duration}s`,
-              // @ts-expect-error custom prop
               ["--drift" as string]: `${p.drift}px`,
             }}
           />
@@ -135,9 +134,7 @@ export default function CosmicBackground() {
             style={{
               top: `${s.top}%`,
               left: `${s.left}%`,
-              // @ts-expect-error custom prop
               ["--angle" as string]: `${s.angle}deg`,
-              // @ts-expect-error custom prop
               ["--travel" as string]: `${s.distance}vw`,
               animationDelay: `${s.delay}s`,
               animationDuration: `${s.duration}s`,

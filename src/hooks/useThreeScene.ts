@@ -1,6 +1,6 @@
 import { useEffect, useRef, useCallback } from "react";
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
 export interface UseThreeSceneOptions {
   onMount?: (
@@ -18,7 +18,7 @@ export interface UseThreeSceneOptions {
 }
 
 export interface UseThreeSceneReturn {
-  containerRef: React.RefObject<HTMLDivElement>;
+  containerRef: React.RefObject<HTMLDivElement | null>;
   scene: THREE.Scene | null;
   camera: THREE.PerspectiveCamera | null;
   renderer: THREE.WebGLRenderer | null;

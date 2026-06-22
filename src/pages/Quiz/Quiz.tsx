@@ -184,7 +184,6 @@ export default function Quiz() {
   const [hintRevealed, setHintRevealed] = useState(false);
   const [answerRevealed, setAnswerRevealed] = useState(false);
   const [pickedIndex, setPickedIndex] = useState<number | null>(null);
-  const [score, setScore] = useState(0);
   const [hintUsed, setHintUsed] = useState(0);
   const [results, setResults] = useState<
     {
@@ -208,7 +207,6 @@ export default function Quiz() {
   const startCategory = useCallback((c: Difficulty) => {
     setCategory(c);
     setCurrentIndex(0);
-    setScore(0);
     setHintUsed(0);
     setHintRevealed(false);
     setAnswerRevealed(false);
@@ -248,7 +246,6 @@ export default function Quiz() {
         mode: current.options ? "choice" : "flashcard",
       },
     ]);
-    setScore((s) => s + 1);
     next();
   };
 
@@ -281,7 +278,6 @@ export default function Quiz() {
     setPhase("home");
     setCategory(null);
     setCurrentIndex(0);
-    setScore(0);
     setHintUsed(0);
     setHintRevealed(false);
     setAnswerRevealed(false);
@@ -302,7 +298,6 @@ export default function Quiz() {
         mode: "choice",
       },
     ]);
-    if (ok) setScore((s) => s + 1);
     next();
   }, [current, pickedIndex, hintUsed]);
 
